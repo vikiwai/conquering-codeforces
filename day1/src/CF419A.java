@@ -36,9 +36,28 @@ public class CF419A
 
         String[] array = line.split(":");
 
-        int hours = Integer.parseInt(array[0]);
-        int minutes = Integer.parseInt(array[1]);
+        for (int counter = 0; counter <= 1440; counter++){
+            int hours = Integer.parseInt(array[0]);
+            int minutes = Integer.parseInt(array[1]);
 
-        System.out.println(isPalindrome(hours, minutes));
+            minutes += counter;
+
+            if (minutes >= 60) {
+                hours +=1;
+                minutes = 0;
+                if (hours >= 24) {
+                    hours = 0;
+                }
+            }
+
+            if (isPalindrome(hours, minutes)) {
+                System.out.println(counter);
+                break;
+            }
+            else {
+                continue;
+            }
+
+        }
     }
 }
