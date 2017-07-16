@@ -18,7 +18,7 @@ public class CF419A
      * @param hours Hours data in current time
      * @param minutes Minutes data in current time
      * @return TRUE, if the string is read equally from left to right and right to left;
-     *         False — otherwise.
+     *         FALSE — otherwise.
      */
     private static boolean isPalindrome(int hours, int minutes){
         String[] arrayTime = {"", ""};
@@ -42,10 +42,7 @@ public class CF419A
         return Integer.parseInt(arrayTime[0]) == Integer.parseInt(arrayTime[1]);
     }
 
-    /**
-     * Main method
-     * @param args Data string
-     */
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
