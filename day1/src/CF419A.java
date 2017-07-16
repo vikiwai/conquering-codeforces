@@ -43,10 +43,10 @@ public class CF419A
             minutes += counter;
 
             if (minutes >= 60) {
-                hours +=1;
-                minutes = 0;
+                hours += minutes/60;
+                minutes %= 60;
                 if (hours >= 24) {
-                    hours = 0;
+                    hours %= 24;
                 }
             }
 
@@ -57,7 +57,6 @@ public class CF419A
             else {
                 continue;
             }
-
         }
     }
 }
