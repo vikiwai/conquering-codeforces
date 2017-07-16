@@ -8,6 +8,6 @@
 
 ![alt text](https://pp.userapi.com/c636417/v636417409/6d6b7/7k406fGrVmw.jpg)
 
-**P.S.** Идея спизжена у [frnkySila](https://github.com/frnkySila), но ничего более!
+**P.S.** Идея — прототип челенджа [frnkySila](https://github.com/frnkySila)
 
-**P.P.S.** Репозиторий, возможно, будет периодически скрытым, потому что Драньков ([Sammers21](https://github.com/Sammers21)) меня мониторит...  А я стесняюсь 
+**P.P.S.** Репозиторий, возможно, будет периодически скрытым, потому что Паша Драньков ([Sammers21](https://github.com/Sammers21)) меня мониторит...  А я стесняюсь 
