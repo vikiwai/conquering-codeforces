@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class CF419A
 {
-    public static boolean isPalindrome(int hours, int minutes){
+    private static boolean isPalindrome(int hours, int minutes){
         String[] arrayTime = {"", ""};
 
         if (hours < 10) {
@@ -21,12 +21,7 @@ public class CF419A
 
         arrayTime[1] = new StringBuffer(arrayTime[1]).reverse().toString();
 
-        if (Integer.parseInt(arrayTime[0]) == Integer.parseInt(arrayTime[1])) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return Integer.parseInt(arrayTime[0]) == Integer.parseInt(arrayTime[1]);
     }
 
     public static void main(String[] args) {
@@ -53,9 +48,6 @@ public class CF419A
             if (isPalindrome(hours, minutes)) {
                 System.out.println(counter);
                 break;
-            }
-            else {
-                continue;
             }
         }
     }
