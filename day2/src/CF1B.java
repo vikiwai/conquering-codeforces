@@ -19,26 +19,18 @@
  */
 
 import java.util.Scanner;
+import java.util.regex.Matcher;
 
 public class CF1B
 {
     private static String concatenation(String cell){
         char[] array = cell.toCharArray();
 
-        int count = 0;
-
-        for (int i = 0; i < array.length; i++) {
-            if (Character.isDigit(array[i])) {
-                count = i;
-                break;
-            }
-        }
-
         String column_string = "";
         String row_string = "";
 
         for (int i = 0; i < array.length; i++) {
-            if (i < count) {
+            if (!Character.isDigit(array[i])) {
                 column_string += array[i];
             }
             else {
@@ -51,23 +43,50 @@ public class CF1B
 
         array = column_string.toCharArray();
 
-        for (int x = 0; x < array.length; x++) {
-            if (x != 1) {
-            column += (((array[x]+1) % 65) * 26 * (array.length - 1 - x));
+        for (int i = 0; i < array.length; i++) {
+            if ((array.length - i - 1) != 0) {
+                column += (array[i] - 'A' + 1) * 26 * (array.length - i - 1);
             }
             else {
-                column += ((array[x]+1) % 65);
+                column += (array[i] - 'A' + 1);
             }
         }
 
         return ("R" + String.valueOf(row) + "C" + String.valueOf(column));
     }
 
-    /*
-    private static String rxcy(String line){
 
+    private static String rxcy(String cell){
+        cell = cell.substring(1);
+
+        String[] array_of_row_and_column = cell.split("C");
+
+        int row = Integer.valueOf(array_of_row_and_column[0]);
+
+        int column_int = Integer.valueOf(array_of_row_and_column[1]);
+        String column_string = array_of_row_and_column[1];
+
+        char[] array = new char[column_string.length()];
+
+        for (int x = 0; x < column_string.length(); x++) {
+            if (x == 0) {
+                if (column_int / 26 == 0) {
+                array[x] = (char) ((column_int % 26) + 64);
+                column_int -= (((array[x] + 1) % 65) * 26);
+                }
+                else {
+                    array[x] = (char) ((column_int / 26) + 64);
+                    column_int -= (((array[x] + 1) % 65) * 26);
+                }
+            }
+            if (x == 1) {
+                array[x] = (char) (column_int + 64);
+            }
+        }
+
+        return (String.valueOf(array) + String.valueOf(row));
     }
-    */
+
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -80,6 +99,17 @@ public class CF1B
         for (int i = 0; i < n; i++){
             cells[i] = scanner.nextLine();
         }
+
+        /*
+        for (int i = 0; i < n; i++){
+            if (cells[i].matches("R\\d+C\\d+")) {
+                System.out.println(rxcy(cells[i]));
+            }
+            else {
+                System.out.println(concatenation(cells[i]));
+            }
+        }
+        */
 
         System.out.println(concatenation(cells[0]));
     }
