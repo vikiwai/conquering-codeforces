@@ -22,8 +22,8 @@ import java.util.Scanner;
 
 public class CF1B
 {
-    private static String concatenation(String line){
-        char[] array = line.toCharArray();
+    private static String concatenation(String cell){
+        char[] array = cell.toCharArray();
 
         int count = 0;
 
@@ -34,7 +34,18 @@ public class CF1B
             }
         }
 
-        return Integer.toString(count);
+        String column = "";
+        String line = "";
+
+        for (int i = 0; i < array.length; i++){
+            if (i < count) {
+                column += array[i];
+            }
+            else {
+                line += array[i];
+            }
+        }
+        return "";
     }
 
     /*
