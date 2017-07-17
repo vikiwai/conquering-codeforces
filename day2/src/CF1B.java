@@ -22,6 +22,27 @@ import java.util.Scanner;
 
 public class CF1B
 {
+    private static String concatenation(String line){
+        char[] array = line.toCharArray();
+
+        int count = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            if (Character.isDigit(array[i])) {
+                count = i;
+                break;
+            }
+        }
+
+        return Integer.toString(count);
+    }
+
+    /*
+    private static String rxcy(String line){
+
+    }
+    */
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
