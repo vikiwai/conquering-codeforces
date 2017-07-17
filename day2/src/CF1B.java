@@ -34,18 +34,33 @@ public class CF1B
             }
         }
 
-        String column = "";
-        String line = "";
+        String column_string = "";
+        String row_string = "";
 
-        for (int i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             if (i < count) {
-                column += array[i];
+                column_string += array[i];
             }
             else {
-                line += array[i];
+                row_string += array[i];
             }
         }
-        return "";
+
+        int row = Integer.valueOf(row_string);
+        int column = 0;
+
+        array = column_string.toCharArray();
+
+        for (int x = 0; x < array.length; x++) {
+            if (x != 1) {
+            column += (((array[x]+1) % 65) * 26 * (array.length - 1 - x));
+            }
+            else {
+                column += ((array[x]+1) % 65);
+            }
+        }
+
+        return ("R" + String.valueOf(row) + "C" + String.valueOf(column));
     }
 
     /*
@@ -65,5 +80,7 @@ public class CF1B
         for (int i = 0; i < n; i++){
             cells[i] = scanner.nextLine();
         }
+
+        System.out.println(concatenation(cells[0]));
     }
 }
