@@ -21,7 +21,6 @@ public class CF71A
         return (String.valueOf(abbreviation[0]) +
                 String.valueOf(word.length() - 2) +
                 String.valueOf(abbreviation[word.length() - 1]));
-
     }
 
     public static void main(String[] args) {
@@ -34,6 +33,15 @@ public class CF71A
 
         for (int i = 0; i < n; i++) {
             words[i] = scanner.nextLine();
+        }
+
+        for (int i = 0; i < n; i++) {
+            if (words[i].length() > 10) {
+                System.out.println(abbreviation(words[i]));
+            }
+            else {
+                System.out.println(words[i]);
+            }
         }
     }
 }
