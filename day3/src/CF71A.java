@@ -15,6 +15,15 @@ import java.util.Scanner;
 
 public class CF71A
 {
+    private static String abbreviation(String word){
+        char[] abbreviation = word.toCharArray();
+
+        return (String.valueOf(abbreviation[0]) +
+                String.valueOf(word.length() - 2) +
+                String.valueOf(abbreviation[word.length() - 1]));
+
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
