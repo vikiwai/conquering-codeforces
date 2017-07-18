@@ -15,6 +15,11 @@ import java.util.Scanner;
 
 public class CF71A
 {
+    /**
+     * The function of substituting a word for an abbreviation
+     * @param word Input word
+     * @return Abbreviation
+     */
     private static String abbreviation(String word){
         char[] abbreviation = word.toCharArray();
 
