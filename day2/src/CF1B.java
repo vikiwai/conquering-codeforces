@@ -93,6 +93,9 @@ public class CF1B
             cells[i] = scanner.nextLine();
         }
 
+        /*
+         * The loop that passes through cells and calls the desired method
+         */
         for (int i = 0; i < n; i++){
             if (cells[i].matches("R\\d+C\\d+")) {
                 System.out.println(rxcy(cells[i]));
