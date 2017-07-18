@@ -14,7 +14,7 @@
  *          каждое из обозначений в другой форме записи.
  *  Входные данные: В первой строке записано целое число n (1 ≤ n ≤ 10^5), количество обозначений в тесте.
  *                  Далее идет n строк, каждая из которых содержит обозначение.
- *                  Известно, что все обозначения корректны, и не содержат ячейки с номерами строк или столбцов > 106.
+ *                  Известно, что все обозначения корректны, и не содержат ячейки с номерами строк или столбцов > 10^6.
  *  Выходные данные: Выведите n строк — каждая строка должна содержать обозначение ячейки в отличной форме записи.
  */
 
@@ -23,6 +23,11 @@ import java.util.regex.Matcher;
 
 public class CF1B
 {
+    /**
+     * Function converts a cell type concatenation of column and row in the view RXCY
+     * @param cell
+     * @return
+     */
     private static String concatenation(String cell){
         char[] array = cell.toCharArray();
 
@@ -44,49 +49,37 @@ public class CF1B
         array = column_string.toCharArray();
 
         for (int i = 0; i < array.length; i++) {
-            if ((array.length - i - 1) != 0) {
-                column += (array[i] - 'A' + 1) * 26 * (array.length - i - 1);
-            }
-            else {
-                column += (array[i] - 'A' + 1);
-            }
+            column *= 26;
+            column += (char)(array[i] - 'A' + 1);
         }
 
         return ("R" + String.valueOf(row) + "C" + String.valueOf(column));
     }
 
-
+    /**
+     * Function converts a cell type RXCY in the view concatenation of column and row
+     * @param cell
+     * @return
+     */
     private static String rxcy(String cell){
         cell = cell.substring(1);
 
-        String[] array_of_row_and_column = cell.split("C");
+        String[] array = cell.split("C");
 
-        int row = Integer.valueOf(array_of_row_and_column[0]);
+        int row = Integer.valueOf(array[0]);
+        int column_int = Integer.valueOf(array[1]);
+        String column_string = "";
 
-        int column_int = Integer.valueOf(array_of_row_and_column[1]);
-        String column_string = array_of_row_and_column[1];
-
-        char[] array = new char[column_string.length()];
-
-        for (int x = 0; x < column_string.length(); x++) {
-            if (x == 0) {
-                if (column_int / 26 == 0) {
-                array[x] = (char) ((column_int % 26) + 64);
-                column_int -= (((array[x] + 1) % 65) * 26);
-                }
-                else {
-                    array[x] = (char) ((column_int / 26) + 64);
-                    column_int -= (((array[x] + 1) % 65) * 26);
-                }
-            }
-            if (x == 1) {
-                array[x] = (char) (column_int + 64);
-            }
+        while (column_int > 0) {
+            column_int -= 1;
+            column_string += String.valueOf((char)(column_int % 26 + 'A'));
+            column_int /= 26;
         }
 
-        return (String.valueOf(array) + String.valueOf(row));
-    }
+        column_string = new StringBuffer(column_string).reverse().toString();
 
+        return (column_string + String.valueOf(row));
+    }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -100,7 +93,6 @@ public class CF1B
             cells[i] = scanner.nextLine();
         }
 
-        /*
         for (int i = 0; i < n; i++){
             if (cells[i].matches("R\\d+C\\d+")) {
                 System.out.println(rxcy(cells[i]));
@@ -109,8 +101,5 @@ public class CF1B
                 System.out.println(concatenation(cells[i]));
             }
         }
-        */
-
-        System.out.println(concatenation(cells[0]));
     }
 }
