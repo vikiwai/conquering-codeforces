@@ -28,5 +28,15 @@ public class CF158A
         for (int i = 0; i < n; i++) {
             numbers[i] = scanner.nextInt();
         }
+
+        int count = 0;
+
+        for (int i = n - 1; i >= 0; i--) {
+            if (numbers[i] >= numbers[k] && numbers[k] != 0){
+                count += 1;
+            }
+        }
+
+        System.out.println(count);
     }
 }
