@@ -25,8 +25,8 @@ public class CF1B
 {
     /**
      * Function converts a cell type concatenation of column and row in the view RXCY
-     * @param cell
-     * @return
+     * @param cell The cell in the table
+     * @return Record cell in the proper format
      */
     private static String concatenation(String cell){
         char[] array = cell.toCharArray();
@@ -58,8 +58,8 @@ public class CF1B
 
     /**
      * Function converts a cell type RXCY in the view concatenation of column and row
-     * @param cell
-     * @return
+     * @param cell The cell in the table
+     * @return Record cell in the proper format
      */
     private static String rxcy(String cell){
         cell = cell.substring(1);
