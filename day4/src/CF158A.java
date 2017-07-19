@@ -32,7 +32,7 @@ public class CF158A
         int count = 0;
 
         for (int i = n - 1; i >= 0; i--) {
-            if (numbers[i] >= numbers[k] && numbers[k] != 0){
+            if (numbers[i] >= numbers[k-1] && numbers[i] > 0){
                 count += 1;
             }
         }
