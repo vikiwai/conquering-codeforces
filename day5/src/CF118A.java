@@ -17,6 +17,8 @@ public class CF118A
     private static String conversion(String line){
         line = line.replaceAll("(?i:[aeiouy])", "");
 
+        line = line.toLowerCase();
+
         return line;
     }
 
