@@ -19,7 +19,13 @@ public class CF118A
 
         line = line.toLowerCase();
 
-        return line;
+        StringBuffer sb_line = new StringBuffer(line);
+
+        for (int i = 0; i < line.length()*2; i+=2){
+            sb_line.insert(i, ".");
+        }
+
+        return String.valueOf(sb_line);
     }
 
     public static void main(String[] args) {
