@@ -32,5 +32,9 @@ public class CF118A
         Scanner scanner = new Scanner(System.in);
 
         String line = scanner.nextLine();
+
+        line = conversion(line);
+
+        System.out.println(line);
     }
 }
