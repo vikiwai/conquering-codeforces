@@ -14,6 +14,12 @@ import java.util.Scanner;
 
 public class CF118A
 {
+    private static String conversion(String line){
+        line = line.replaceAll("(?i:[aeiouy])", "");
+
+        return line;
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
