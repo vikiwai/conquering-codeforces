@@ -21,5 +21,12 @@ public class CF50A
 
         int m = scanner.nextInt();
         int n = scanner.nextInt();
+
+        if (m * n % 2 == 0) {
+            System.out.println(m * n / 2);
+        }
+        else {
+            System.out.println((m * n - 1) / 2);
+        }
     }
 }
