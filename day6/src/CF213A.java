@@ -34,7 +34,6 @@ public class CF213A
          */
         int count = 0;
 
-
         /*
          * Looping through the number of tasks that friends will implement
          */
