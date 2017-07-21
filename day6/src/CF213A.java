@@ -22,12 +22,22 @@ public class CF213A
     {
         Scanner scanner = new Scanner(System.in);
 
+        /*
+         * Number of tasks in the competition
+         */
         int n = scanner.nextInt();
 
         scanner.nextLine();
 
+        /*
+         * Number of tasks for which the guys will write a solution
+         */
         int count = 0;
 
+
+        /*
+         * Looping through the number of tasks that friends will implement
+         */
         for (int i = 0; i < n; i++) {
             int Petya = scanner.nextInt();
             int Vasya = scanner.nextInt();
