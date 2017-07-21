@@ -12,9 +12,14 @@
  *  Выходные данные: Выведите одно число — максимальное количество доминошек, которое можно уложить.
  */
 
+import java.util.Scanner;
+
 public class CF50A
 {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        int m = scanner.nextInt();
+        int n = scanner.nextInt();
     }
 }
