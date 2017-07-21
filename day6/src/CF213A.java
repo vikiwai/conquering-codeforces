@@ -14,6 +14,32 @@
  *  Выходные данные: Выведите единственное целое число — количество задач, которые друзья будут реализовывать.
  */
 
+import java.util.Scanner;
+
 public class CF213A
 {
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+
+        scanner.nextLine();
+
+        int count = 0;
+
+        for (int i = 0; i < n; i++) {
+            int Petya = scanner.nextInt();
+            int Vasya = scanner.nextInt();
+            int Tonya = scanner.nextInt();
+
+            scanner.nextLine();
+
+            if (Petya + Vasya + Tonya >= 2) {
+                count +=1;
+            }
+        }
+
+        System.out.println(count);
+    }
 }
