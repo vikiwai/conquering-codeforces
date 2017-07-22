@@ -22,6 +22,15 @@ import java.util.Scanner;
 public class CF282A
 {
     public static void main(String[] args) {
-      
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        String[] sentences = new String[n];
+
+        for (int i = 0; i < n; i++) {
+            sentences[i] = scanner.nextLine();
+        }
     }
 }
