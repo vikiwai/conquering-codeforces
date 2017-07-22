@@ -47,7 +47,6 @@ public class CF2A
             }
             if (Integer.valueOf(play[i]) == max_points) {
                 count_max_points += 1;
-
             }
         }
 
