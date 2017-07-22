@@ -36,30 +36,28 @@ public class CF2A
             play[i + 1] = String.valueOf(scanner.nextInt());
         }
 
-        for (int i = 0; i < play.length; i++) {
-            System.out.println(play[i]);
-        }
-        /*
         int max_points = 0;
-        int count_max_points = 0;
+        int count_max_points = 1;
         int index_max_points = 0;
 
+        /*
         int[] array_of_index = new int[n];
         int size_array_of_index = 0;
 
         String[] array_of_players = new String[n];
         int size_array_of_players = 0;
+        */
 
         for (int i = 1; i < play.length; i += 2) {
             if (Integer.valueOf(play[i]) > max_points) {
                 max_points = Integer.valueOf(play[i]);
                 index_max_points = i;
-                array_of_index[size_array_of_index] = i;
+                // array_of_index[size_array_of_index] = i;
             }
-            if (Integer.valueOf(play[i]) == max_points) {
+            else if (Integer.valueOf(play[i]) == max_points) {
                 count_max_points += 1;
-                size_array_of_index += 1;
-                array_of_index[size_array_of_index] = i;
+                // size_array_of_index += 1;
+                // array_of_index[size_array_of_index] = i;
             }
         }
 
@@ -67,6 +65,7 @@ public class CF2A
             System.out.println(play[index_max_points - 1]);
         }
 
+        /*
         else {
             int i = 0;
             while (array_of_index[i] > 0 && i < n) {
