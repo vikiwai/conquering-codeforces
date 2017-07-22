@@ -40,24 +40,24 @@ public class CF2A
         int count_max_points = 1;
         int index_max_points = 0;
 
-        /*
+
         int[] array_of_index = new int[n];
         int size_array_of_index = 0;
 
         String[] array_of_players = new String[n];
         int size_array_of_players = 0;
-        */
+
 
         for (int i = 1; i < play.length; i += 2) {
             if (Integer.valueOf(play[i]) > max_points) {
                 max_points = Integer.valueOf(play[i]);
                 index_max_points = i;
-                // array_of_index[size_array_of_index] = i;
+                array_of_index[size_array_of_index] = i;
             }
             else if (Integer.valueOf(play[i]) == max_points) {
                 count_max_points += 1;
-                // size_array_of_index += 1;
-                // array_of_index[size_array_of_index] = i;
+                size_array_of_index += 1;
+                array_of_index[size_array_of_index] = i;
             }
         }
 
