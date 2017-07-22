@@ -32,5 +32,18 @@ public class CF282A
         for (int i = 0; i < n; i++) {
             sentences[i] = scanner.nextLine();
         }
+
+        int x = 0;
+
+        for (int i = 0; i < n; i++) {
+            if (sentences[i].contains("++")) {
+                x += 1;
+            }
+            else {
+                x -= 1;
+            }
+        }
+
+        System.out.println(x);
     }
 }
