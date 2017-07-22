@@ -28,5 +28,12 @@ public class CF2A
         int n = scanner.nextInt();
 
         scanner.nextLine();
+
+        String[] play = new String[n * 2];
+
+        for (int i = 0; i < n * 2 - 1; i += 2) {
+            play[i] = scanner.next();
+            play[i + 1] = String.valueOf(scanner.nextInt());
+        }
     }
 }
