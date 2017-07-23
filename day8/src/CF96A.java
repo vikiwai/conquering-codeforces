@@ -20,18 +20,23 @@ public class CF96A
 
         char[] situation = scanner.nextLine().toCharArray();
 
-        int danger = 0;
+        int danger = 1;
 
         for (int i = 0; i < situation.length - 1; i++) {
             if (situation[i] == situation[i+1]) {
                 danger += 1;
             }
+            else {
+                danger = 1;
+            }
+
+            if (danger >= 7) {
+                System.out.println("YES");
+                break;
+            }
         }
 
-        if (danger >= 7) {
-            System.out.println("YES");
-        }
-        else {
+        if (danger < 7) {
             System.out.println("NO");
         }
     }
