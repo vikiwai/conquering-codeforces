@@ -27,5 +27,12 @@ public class CF96A
                 danger += 1;
             }
         }
+
+        if (danger >= 7) {
+            System.out.println("YES");
+        }
+        else {
+            System.out.println("NO");
+        }
     }
 }
