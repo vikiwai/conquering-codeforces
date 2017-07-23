@@ -11,9 +11,13 @@
  *  Выходные данные: Выведите «YES» если ситуация опасная. В противном случае выведите «NO».
  */
 
+import java.util.Scanner;
+
 public class CF96A
 {
     public static void main(String[] args) {
-	// write your code here
+        Scanner scanner = new Scanner(System.in);
+
+        String situation = scanner.nextLine();
     }
 }
