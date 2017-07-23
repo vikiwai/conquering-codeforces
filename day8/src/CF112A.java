@@ -30,7 +30,8 @@ public class CF112A
         if (line_one.compareToIgnoreCase(line_two) > 0) {
             System.out.println("1");
         }
-        else {
+
+        if (line_one.compareToIgnoreCase(line_two) < 0){
             System.out.println("-1");
         }
     }
