@@ -18,6 +18,14 @@ public class CF96A
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String situation = scanner.nextLine();
+        char[] situation = scanner.nextLine().toCharArray();
+
+        int danger = 0;
+
+        for (int i = 0; i < situation.length - 1; i++) {
+            if (situation[i] == situation[i+1]) {
+                danger += 1;
+            }
+        }
     }
 }
