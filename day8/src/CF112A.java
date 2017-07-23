@@ -22,5 +22,16 @@ public class CF112A
 
         String line_one = scanner.nextLine();
         String line_two = scanner.nextLine();
+
+        if (line_one.compareToIgnoreCase(line_two) == 0) {
+            System.out.println("0");
+        }
+
+        if (line_one.compareToIgnoreCase(line_two) > 0) {
+            System.out.println("1");
+        }
+        else {
+            System.out.println("-1");
+        }
     }
 }
