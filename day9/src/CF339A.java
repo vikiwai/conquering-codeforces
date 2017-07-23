@@ -1,5 +1,5 @@
 /*  conquering-codeforces
- *  day 1. #339A
+ *  day 9. #339A
  *
  *  Задача: Учитель записал на доске сумму нескольких чисел, которую требуется посчитать. Чтобы было проще считать,
  *          в сумме используются только числа 1, 2 и 3. Ксения только учится считать, и поэтому она может посчитать
@@ -12,9 +12,13 @@
  *  Выходные данные: Выведите новую сумму, которую сможет посчитать Ксения.
  */
 
+import java.util.Scanner;
+
 public class CF339A
 {
     public static void main(String[] args) {
-	
+        Scanner scanner = new Scanner(System.in);
+
+        String sum = scanner.next();
     }
 }
