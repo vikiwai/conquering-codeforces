@@ -12,6 +12,15 @@
  *                   Если строки равны, выведите «0». Учтите, что регистр букв не учитывается при сравнении.
  */
 
+import java.util.Scanner;
+
 public class CF112A
 {
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+
+        String line_one = scanner.nextLine();
+        String line_two = scanner.nextLine();
+    }
 }
