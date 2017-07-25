@@ -12,9 +12,20 @@
  *  Выходные данные: Выведите единственное число — минимальное необходимое количество такси, чтобы отвезти всех ребят.
  */
 
+import java.util.Scanner;
+
 public class CF158B
 {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        int[] numbers = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            numbers[i] = scanner.nextInt();
+        }
     }
 }

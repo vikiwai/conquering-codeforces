@@ -16,9 +16,24 @@ import java.util.Scanner;
 
 public class CF339A
 {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         Scanner scanner = new Scanner(System.in);
 
-        String sum = scanner.next();
+        String line = scanner.next();
+
+        String[] sum = line.split("\\+");
+
+        for (int i = sum.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (Integer.valueOf(sum[j]) >= Integer.valueOf(sum[j + 1])) {
+                    String temp = sum[j];
+                    sum[j] = sum[j + 1];
+                    sum[j + 1] = temp;
+                }
+            }
+        }
+
+        line = sum[0];
     }
 }
