@@ -37,5 +37,20 @@ public class CF158B
                 }
             }
         }
+
+        int count = 0;
+
+        for (int i = 0; i < n; i++) {
+            if (numbers[i] == 4) {
+                count += 1;
+            }
+            else {
+                for (int j = i + 1; j < n; j++) {
+                    if (numbers[i] + numbers[j] <= 4) {
+                        count +=1;
+                    }
+                }
+            }
+        }
     }
 }
