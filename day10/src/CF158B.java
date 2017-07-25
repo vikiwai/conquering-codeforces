@@ -38,16 +38,41 @@ public class CF158B
             }
         }
 
+        for (int i = 0; i < n; i++) {
+            System.out.print(numbers[i]);
+            System.out.print(" ");
+        }
+
         int count = 0;
 
         for (int i = 0; i < n; i++) {
-            if (numbers[i] == 4) {
+
+            int temp = numbers[i];
+
+            if (temp == 4) {
                 count += 1;
             }
             else {
-                for (int j = i + 1; j < n; j++) {
-                    if (numbers[i] + numbers[j] <= 4) {
-                        count +=1;
+                int j = i + 1;
+
+                while (temp <= 4) {
+
+                    if (j >= n) {
+                        break;
+                    }
+
+                    if (temp + numbers[j] <= 4 && temp > 0 && numbers[j] > 0) {
+                        temp += numbers[j];
+                        numbers[j] = 0;
+                        j += 1;
+                        break;
+                    }
+                    else {
+                        j += 1;
+                    }
+
+                    if (temp > 0 && numbers[j-1] > 0) {
+                        count += 1;
                     }
                 }
             }
