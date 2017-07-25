@@ -52,5 +52,7 @@ public class CF158B
                 }
             }
         }
+
+        System.out.println(count);
     }
 }
