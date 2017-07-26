@@ -13,7 +13,6 @@
  */
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class CF158B
@@ -31,6 +30,12 @@ public class CF158B
         }
 
         Arrays.sort(numbers);
+
+        for (int i = 0; i < n / 2; i++) {
+            int temp = numbers[i];
+            numbers[i] = numbers[numbers.length - 1 - i];
+            numbers[numbers.length - 1 - i] = temp;
+        }
 
         int count = 0;
 
