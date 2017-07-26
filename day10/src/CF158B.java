@@ -30,7 +30,7 @@ public class CF158B
 
         for (int i = n; i > 0; i--) {
             for (int j = 0; j < i - 1; j++) {
-                if (numbers[j] <= numbers[j + 1]) {
+                if (numbers[j] < numbers[j + 1]) {
                     int temp = numbers[j];
                     numbers[j] = numbers[j + 1];
                     numbers[j + 1] = temp;
@@ -42,20 +42,18 @@ public class CF158B
 
         for (int i = 0; i < n; i++) {
 
-            int temp = numbers[i];
-
-            if (temp == 4) {
+            if (numbers[i] == 4) {
                 count += 1;
             }
             else {
-                if (temp != 0) {
+                if (numbers[i] != 0) {
                     for (int j = i + 1; j < n; j++) {
-                        if (temp + numbers[j] <= 4 && numbers[j] != 0) {
-                            temp += numbers[j];
+                        if (numbers[i] + numbers[j] <= 4 && numbers[j] != 0) {
+                            numbers[i] += numbers[j];
                             numbers[j] = 0;
                         }
                     }
-                    
+
                     count += 1;
                 }
             }
