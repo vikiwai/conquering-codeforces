@@ -28,14 +28,21 @@ public class CF158B
             numbers[i] = scanner.nextInt();
         }
 
-        for (int i = n; i > 0; i--) {
-            for (int j = 0; j < i - 1; j++) {
-                if (numbers[j] < numbers[j + 1]) {
+        boolean already_sorted = true;
+
+        for (int i = n; i > 0; --i) {
+            for (int j = 0; j < i - 1; ++j) {
+                if (numbers[j] > numbers[j + 1]) {
                     int temp = numbers[j];
                     numbers[j] = numbers[j + 1];
                     numbers[j + 1] = temp;
+
+                    already_sorted = false;
                 }
             }
+
+            if (already_sorted)
+                break;
         }
 
         int count = 0;
