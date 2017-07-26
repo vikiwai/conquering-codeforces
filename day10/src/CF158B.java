@@ -29,35 +29,71 @@ public class CF158B
             numbers[i] = scanner.nextInt();
         }
 
-        Arrays.sort(numbers);
-
-        for (int i = 0; i < n / 2; i++) {
-            int temp = numbers[i];
-            numbers[i] = numbers[numbers.length - 1 - i];
-            numbers[numbers.length - 1 - i] = temp;
-        }
-
-        int count = 0;
+        int count_1 = 0;
+        int count_2 = 0;
+        int count_3 = 0;
+        int count_4 = 0;
 
         for (int i = 0; i < n; i++) {
 
-            if (numbers[i] == 4) {
-                count += 1;
+            if (numbers[i] == 1) {
+                count_1 += 1;
             }
-            else {
-                if (numbers[i] != 0) {
-                    for (int j = i + 1; j < n; j++) {
-                        if (numbers[i] + numbers[j] <= 4 && numbers[j] != 0) {
-                            numbers[i] += numbers[j];
-                            numbers[j] = 0;
-                        }
-                    }
 
-                    count += 1;
-                }
+            if (numbers[i] == 2) {
+                count_2 += 1;
+            }
+
+            if (numbers[i] == 3) {
+                count_3 += 1;
+            }
+
+            if (numbers[i] == 4) {
+                count_4 += 1;
             }
         }
 
-        System.out.println(count);
+        if (count_3 <= count_1){
+            count_1 -= count_3;
+        }
+        else {
+            count_1 = 0;
+        }
+
+        if (count_2 % 2 == 0) {
+            count_2 /= 2;
+        }
+        else {
+            count_2 /= 2;
+            count_2 += 1;
+            if (count_1 >= 2) {
+                count_1 -= 2;
+            }
+            else {
+                count_1 -= 1;
+            }
+        }
+
+        if (count_1 > 0) {
+            if (count_1 <= 4) {
+                count_1 = 1;
+            }
+            else {
+                if (count_1 % 4 == 0) {
+                    count_1 /= 4;
+                }
+                else {
+                    count_1 /= 4;
+                    count_1 += 1;
+                }
+            }
+        }
+        else {
+            count_1 = 0;
+        }
+
+        int taxi = count_1 + count_2 + count_3 + count_4;
+
+        System.out.println(taxi);
     }
 }
