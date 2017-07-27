@@ -11,8 +11,16 @@
  *  Выходные данные: Выведите единственное целое число — ответ на задачу.
  */
 
+import java.util.Scanner;
+
 public class CF266A
 {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        char[] colors = scanner.nextLine().toCharArray();
     }
 }
