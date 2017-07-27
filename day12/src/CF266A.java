@@ -40,5 +40,7 @@ public class CF266A
                 previous_stage = false;
             }
         }
+
+        System.out.println(total);
     }
 }
