@@ -14,6 +14,25 @@
  *                   вдоль пути. Во вторую выведите сам путь.
  */
 
+import java.util.Scanner;
+
 public class CF2B
 {
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        int[][] matrix = new int[n][n];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                matrix[i][j] = scanner.nextInt();
+            }
+
+            scanner.nextLine();
+        }
+    }
 }
