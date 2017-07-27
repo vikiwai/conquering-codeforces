@@ -38,10 +38,10 @@ public class CF116A
         int max_capacity = 0;
 
         for (int i = 0; i < passengers.length; i++) {
-            if (i % 2 == 1) {
+            if (i % 2 == 0) {
                 capacity -= passengers[i];
             }
-            if (i % 2 == 0) {
+            if (i % 2 == 1) {
                 capacity += passengers[i];
             }
 
