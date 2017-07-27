@@ -49,5 +49,7 @@ public class CF116A
                 max_capacity = capacity;
             }
         }
+
+        System.out.println(max_capacity);
     }
 }
