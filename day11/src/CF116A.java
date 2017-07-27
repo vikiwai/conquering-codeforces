@@ -33,5 +33,21 @@ public class CF116A
             passengers[i + 1] = scanner.nextInt();
             scanner.nextLine();
         }
+
+        int capacity = 0;
+        int max_capacity = 0;
+
+        for (int i = 0; i < passengers.length; i++) {
+            if (i % 2 == 1) {
+                capacity -= passengers[i];
+            }
+            if (i % 2 == 0) {
+                capacity += passengers[i];
+            }
+
+            if (capacity > max_capacity) {
+                max_capacity = capacity;
+            }
+        }
     }
 }
