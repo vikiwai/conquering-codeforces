@@ -22,5 +22,23 @@ public class CF266A
         scanner.nextLine();
 
         char[] colors = scanner.nextLine().toCharArray();
+
+        int total = 0;
+        int current = 0;
+        boolean previous_stage = false;
+
+        for (int i = 0; i < colors.length - 1; i++) {
+            if (colors[i] == colors[i + 1]) {
+                if (previous_stage) {
+                    current += 1;
+                } else {
+                    total += current;
+                }
+
+                previous_stage = true;
+            } else {
+                previous_stage = false;
+            }
+        }
     }
 }
