@@ -16,8 +16,22 @@
  *                   Допускается, что вместимость может быть равна нулю.
  */
 
+import java.util.Scanner;
+
 public class CF116A
 {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        int[] passengers = new int[2 * n];
+
+        for (int i = 0; i < passengers.length - 1; i += 2) {
+            passengers[i] = scanner.nextInt();
+            passengers[i + 1] = scanner.nextInt();
+            scanner.nextLine();
+        }
     }
 }
