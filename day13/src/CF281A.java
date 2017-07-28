@@ -17,5 +17,9 @@ public class CF281A
         Scanner scanner = new Scanner(System.in);
 
         String word = scanner.nextLine();
+
+        char[] letters = word.toCharArray();
+
+        letters[0] = Character.toUpperCase(letters[0]);
     }
 }
