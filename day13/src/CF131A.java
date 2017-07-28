@@ -21,5 +21,40 @@ public class CF131A
         Scanner scanner = new Scanner(System.in);
 
         char[] letters = scanner.nextLine().toCharArray();
+
+        if (letters.length == 1) {
+            if (letters[0] == Character.toUpperCase(letters[0])) {
+                    System.out.println(String.valueOf(letters));
+            }
+            else {
+                    letters[0] = Character.toUpperCase(letters[0]);
+                    System.out.println(String.valueOf(letters));
+            }
+        }
+
+        else {
+            if (letters[0] == Character.toUpperCase(letters[0])) {
+                for (int i = 1; i < letters.length; i++) {
+                    if (letters[i] == Character.toUpperCase(letters[i])) {
+                        letters[i] = Character.toLowerCase(letters[i]);
+                    }
+                }
+
+                System.out.println(String.valueOf(letters));
+            }
+
+            else {
+                letters[0] = Character.toUpperCase(letters[0]);
+
+                for (int i = 1; i < letters.length; i++) {
+                    if (letters[i] == Character.toUpperCase(letters[i])) {
+                        letters[i] = Character.toLowerCase(letters[i]);
+                    }
+                }
+
+                System.out.println(String.valueOf(letters));
+            }
+        }
+
     }
 }
