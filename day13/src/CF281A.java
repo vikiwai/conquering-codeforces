@@ -9,9 +9,13 @@
  *  Выходные данные: Выведите капитализацию слова.
  */
 
+import java.util.Scanner;
+
 public class CF281A
 {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        String word = scanner.nextLine();
     }
 }
