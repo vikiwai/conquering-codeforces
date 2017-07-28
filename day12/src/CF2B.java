@@ -14,6 +14,8 @@
  *                   вдоль пути. Во вторую выведите сам путь.
  */
 
+import com.sun.xml.internal.bind.v2.TODO;
+
 import java.util.Scanner;
 
 public class CF2B
@@ -47,8 +49,8 @@ public class CF2B
             line += (String.valueOf(i) + String.valueOf(j));
             i++;
             flag_i = true;
-
-
         }
+
+        // TODO поиск в ширину
     }
 }
