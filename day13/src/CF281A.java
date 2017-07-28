@@ -21,5 +21,7 @@ public class CF281A
         char[] letters = word.toCharArray();
 
         letters[0] = Character.toUpperCase(letters[0]);
+
+        System.out.println(String.valueOf(letters));
     }
 }
