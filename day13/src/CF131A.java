@@ -12,10 +12,14 @@
  *  Выходные данные: Выведите результат обработки данного слова.
  */
 
+import java.util.Scanner;
+
 public class CF131A
 {
     public static void main(String[] args)
     {
-        
+        Scanner scanner = new Scanner(System.in);
+
+        String word = scanner.nextLine();
     }
 }
