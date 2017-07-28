@@ -20,6 +20,6 @@ public class CF131A
     {
         Scanner scanner = new Scanner(System.in);
 
-        String word = scanner.nextLine();
+        char[] letters = scanner.nextLine().toCharArray();
     }
 }
