@@ -15,6 +15,7 @@
  *  Выходные данные: В единственной строке выведите одно число — минимальное необходимое количество монет.
  */
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class CF160A
@@ -36,6 +37,22 @@ public class CF160A
             sum += coins[i];
         }
 
+        int border = sum / 2 + 1;
 
+        Arrays.sort(coins);
+
+        int k = 0;
+        int sum_one = 0;
+
+        for (int i = coins.length - 1; i >= 0; i--) {
+            sum_one += coins[i];
+            k += 1;
+
+            if (sum_one > border) {
+                break;
+            }
+        }
+
+        System.out.println(k);
     }
 }
