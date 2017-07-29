@@ -15,10 +15,27 @@
  *  Выходные данные: В единственной строке выведите одно число — минимальное необходимое количество монет.
  */
 
+import java.util.Scanner;
+
 public class CF160A
 {
     public static void main(String[] args)
     {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        int[] coins = new int[n];
+
+        int sum = 0;
+
+        for (int i = 0; i < n; i++) {
+            coins[i] = scanner.nextInt();
+
+            sum += coins[i];
+        }
+
 
     }
 }
