@@ -22,8 +22,16 @@ public class CF832A
     {
         Scanner scanner = new Scanner(System.in);
 
-        int n = scanner.nextInt();
-        int k = scanner.nextInt();
+        long n = scanner.nextLong();
+        long k = scanner.nextLong();
+
         scanner.nextLine();
+
+        if ((n / k) % 2 == 1) {
+            System.out.println("YES");
+        }
+        else {
+            System.out.println("NO");
+        }
     }
 }
