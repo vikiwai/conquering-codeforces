@@ -16,10 +16,14 @@
  *                   и «NO» в противном случае.
  */
 
+import java.util.Scanner;
+
 public class CF133A
 {
     public static void main(String[] args)
     {
+        Scanner scanner = new Scanner(System.in);
 
+        String program = scanner.nextLine();
     }
 }
