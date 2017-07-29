@@ -48,7 +48,7 @@ public class CF160A
             sum_one += coins[i];
             k += 1;
 
-            if (sum_one > border) {
+            if (sum_one >= border) {
                 break;
             }
         }
