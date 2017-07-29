@@ -29,6 +29,9 @@ public class CF131A
             change = false;
         }
 
+        /*
+         * String of all letters except the first
+         */
         String word = new String(letters, 1,letters.length - 1);
 
         if (letters[0] == Character.toLowerCase(letters[0]) && word.equals(word.toUpperCase())) {
