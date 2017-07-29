@@ -25,5 +25,12 @@ public class CF133A
         Scanner scanner = new Scanner(System.in);
 
         String program = scanner.nextLine();
+
+        if (program.indexOf('H') != -1 || program.indexOf('Q') != -1 || program.indexOf('9') != -1) {
+            System.out.println("YES");
+        }
+        else {
+            System.out.println("NO");
+        }
     }
 }
