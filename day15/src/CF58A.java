@@ -10,9 +10,13 @@
  *  Выходные данные: Если Васе удалось поздороваться, выведите "YES", иначе выведите "NO".
  */
 
+import java.util.Scanner;
+
 public class CF58A
 {
     public static void main(String[] args) {
-	
+        Scanner scanner = new Scanner(System.in);
+
+        String line = scanner.nextLine();
     }
 }
