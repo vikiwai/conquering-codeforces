@@ -18,5 +18,11 @@ public class CF58A
         Scanner scanner = new Scanner(System.in);
 
         String line = scanner.nextLine();
+
+        int index_h = line.indexOf('h');
+
+        line = line.substring(index_h + 1, line.length());
+
+
     }
 }
