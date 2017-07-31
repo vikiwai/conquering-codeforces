@@ -19,10 +19,20 @@ public class CF58A
 
         String line = scanner.nextLine();
 
-        int index_h = line.indexOf('h');
+        char[] letters = "hello".toCharArray();
 
-        line = line.substring(index_h + 1, line.length());
+        for (int i = 0; i < letters.length; i++) {
+            int index = line.indexOf(letters[i]);
 
+            line = line.substring(index + 1, line.length());
 
+            if (index == -1) {
+                System.out.println("NO");
+                break;
+            }
+            else if (i == letters.length - 1) {
+                System.out.println("YES");
+            }
+        }
     }
 }
