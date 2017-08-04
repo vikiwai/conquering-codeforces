@@ -22,6 +22,111 @@
  *                   и undefined, если направление определить нельзя.
  */
 
+import java.util.Scanner;
+
 public class CF834A
 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        char[] positions = scanner.nextLine().toCharArray();
+
+        char initial_position = positions[0];
+        char end_position = positions[2];
+
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        n = n % 4;
+
+        if (n == 0) {
+            System.out.println("undefined");
+        }
+
+        if (n == 1) {
+            switch (initial_position) {
+                case 'v' : {
+                    if (end_position == '<') {
+                        System.out.println("cw");
+                    } else {
+                        System.out.println("ccw");
+                    }
+
+                    break;
+                }
+                case '<' : {
+                    if (end_position == '^') {
+                        System.out.println("cw");
+                    } else {
+                        System.out.println("ccw");
+                    }
+
+                    break;
+                }
+                case '^' : {
+                    if (end_position == '>') {
+                        System.out.println("cw");
+                    } else {
+                        System.out.println("ccw");
+                    }
+
+                    break;
+                }
+                case '>' : {
+                    if (end_position == 'v') {
+                        System.out.println("cw");
+                    } else {
+                        System.out.println("ccw");
+                    }
+
+                    break;
+                }
+            }
+        }
+
+        if (n == 2) {
+            System.out.println("undefined");
+        }
+
+        if (n == 3) {
+            switch (initial_position) {
+                case 'v' : {
+                    if (end_position == '>') {
+                        System.out.println("cw");
+                    } else {
+                        System.out.println("ccw");
+                    }
+
+                    break;
+                }
+                case '<' : {
+                    if (end_position == 'v') {
+                        System.out.println("cw");
+                    } else {
+                        System.out.println("ccw");
+                    }
+
+                    break;
+                }
+                case '^' : {
+                    if (end_position == '<') {
+                        System.out.println("cw");
+                    } else {
+                        System.out.println("ccw");
+                    }
+
+                    break;
+                }
+                case '>' : {
+                    if (end_position == '^') {
+                        System.out.println("cw");
+                    } else {
+                        System.out.println("ccw");
+                    }
+
+                    break;
+                }
+            }
+        }
+    }
 }

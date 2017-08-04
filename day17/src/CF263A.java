@@ -35,12 +35,41 @@ public class CF263A
             scanner.nextLine();
         }
 
+        int k = 0;
+        int index_i = 0;
+        int index_j = 0;
+
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
-                if (matrix[i][j] == 1 && matrix[i][j] != matrix[2][2]) {
-                    if (i
+                if (matrix[i][j] == 1) {
+                    index_i = i;
+                    index_j = j;
                 }
             }
         }
+
+        while (index_i != 2) {
+            if (index_i < 2) {
+                index_i += 1;
+                k += 1;
+            }
+            else {
+                index_i -= 1;
+                k += 1;
+            }
+        }
+
+        while (index_j != 2) {
+            if (index_j < 2) {
+                index_j += 1;
+                k += 1;
+            }
+            else {
+                index_j -= 1;
+                k += 1;
+            }
+        }
+
+        System.out.println(k);
     }
 }
