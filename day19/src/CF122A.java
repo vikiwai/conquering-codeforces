@@ -21,5 +21,12 @@ public class CF122A
 
         int n = scanner.nextInt();
         scanner.nextLine();
+
+        int number_of_digit = 0;
+
+        while (n > 0) {
+            n /= 10;
+            number_of_digit += 1;
+        }
     }
 }
