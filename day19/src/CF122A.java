@@ -11,9 +11,15 @@
  *                   если число n почти счастливое, иначе выведите «NO» (без кавычек).
  */
 
+import java.util.Scanner;
+
 public class CF122A
 {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
 
+        int n = scanner.nextInt();
+        scanner.nextLine();
     }
 }
