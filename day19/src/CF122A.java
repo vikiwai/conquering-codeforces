@@ -28,5 +28,12 @@ public class CF122A
             n /= 10;
             number_of_digit += 1;
         }
+
+        int size = 0;
+
+        while (number_of_digit > 0) {
+            size += Math.pow(2, number_of_digit);
+            number_of_digit -= 1;
+        }
     }
 }
