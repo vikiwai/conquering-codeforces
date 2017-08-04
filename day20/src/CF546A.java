@@ -30,7 +30,12 @@ public class CF546A
             sum += k * i;
         }
 
-        System.out.println(sum - n);
+        if (sum > n) {
+            System.out.println(sum - n);
+        }
+        else {
+            System.out.println(0);
+        }
 
     }
 }
