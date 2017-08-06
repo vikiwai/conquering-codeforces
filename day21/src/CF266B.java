@@ -27,6 +27,19 @@ public class CF266B
         int t = scanner.nextInt();
         scanner.nextLine();
 
-        String s = scanner.nextLine();
+        char[] letters = scanner.nextLine().toCharArray();
+
+        for (int i = 0; i < t; i++) {
+            for (int j = 0; j < letters.length - 1; j++) {
+                if (letters[j] == 'B' && letters[i + 1] == 'G') {
+                    char temp = letters[i];
+                    letters[i] = letters[i + 1];
+                    letters[i + 1] = temp;
+
+                    j += 1;
+                }
+            }
+        }
+        
     }
 }
