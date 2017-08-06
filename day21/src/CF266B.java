@@ -31,10 +31,11 @@ public class CF266B
 
         for (int i = 0; i < t; i++) {
             for (int j = 0; j < letters.length - 1; j++) {
-                if (letters[j] == 'B' && letters[i + 1] == 'G') {
-                    char temp = letters[i];
-                    letters[i] = letters[i + 1];
-                    letters[i + 1] = temp;
+
+                if (letters[j] == 'B' && letters[j + 1] == 'G') {
+                    char temp = letters[j];
+                    letters[j] = letters[j + 1];
+                    letters[j + 1] = temp;
 
                     j += 1;
                 }
