@@ -39,5 +39,7 @@ public class CF148A
                 }
             }
         }
+
+        System.out.println(affected);
     }
 }
