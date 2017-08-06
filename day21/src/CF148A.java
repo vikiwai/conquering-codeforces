@@ -20,10 +20,11 @@ public class CF148A
     {
         Scanner scanner = new Scanner(System.in);
 
-        int k = Integer.valueOf(scanner.nextLine());
-        int l = Integer.valueOf(scanner.nextLine());
-        int m = Integer.valueOf(scanner.nextLine());
-        int n = Integer.valueOf(scanner.nextLine());
+        int[] damages = new int[4];
+
+        for (int i = 0; i < damages.length; i++) {
+            damages[i] = Integer.valueOf(scanner.nextLine());
+        }
 
         int d = Integer.valueOf(scanner.nextLine());
     }
