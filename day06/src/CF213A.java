@@ -21,17 +21,9 @@ public class CF213A
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
+        
+        int n = Integer.parseInt(scanner.nextLine());
 
-        /*
-         * Number of tasks in the competition
-         */
-        int n = scanner.nextInt();
-
-        scanner.nextLine();
-
-        /*
-         * Number of tasks for which the guys will write a solution
-         */
         int count = 0;
 
         /*

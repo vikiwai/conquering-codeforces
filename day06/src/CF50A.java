@@ -24,7 +24,7 @@ public class CF50A
         scanner.nextLine();
 
         /*
-         * Data output condition
+         * Condition for data output
          */
         if (m * n % 2 == 0) {
             System.out.println(m * n / 2);
