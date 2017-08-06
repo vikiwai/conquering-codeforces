@@ -14,6 +14,11 @@ import java.util.Scanner;
 
 public class CF118A
 {
+    /**
+     * The method that all uppercase consonant letters replace with lowercase
+     * @param line An input string
+     * @return Converted string
+     */
     private static String conversion(String line){
         line = line.replaceAll("(?i:[aeiouy])", "");
 
