@@ -40,6 +40,7 @@ public class CF266B
                 }
             }
         }
-        
+
+        System.out.println(String.valueOf(letters));
     }
 }
