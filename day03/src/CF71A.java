@@ -31,8 +31,7 @@ public class CF71A
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int n = scanner.nextInt();
-        scanner.nextLine();
+        int n = Integer.parseInt(scanner.nextLine());
 
         String[] words = new String[n];
 
@@ -40,6 +39,9 @@ public class CF71A
             words[i] = scanner.nextLine();
         }
 
+        /*
+         * The loop to check the lines
+         */
         for (int i = 0; i < n; i++) {
             if (words[i].length() > 10) {
                 System.out.println(abbreviation(words[i]));
