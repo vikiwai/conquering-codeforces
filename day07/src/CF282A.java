@@ -24,8 +24,7 @@ public class CF282A
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int n = scanner.nextInt();
-        scanner.nextLine();
+        int n = Integer.parseInt(scanner.nextLine());
 
         String[] sentences = new String[n];
 
@@ -35,6 +34,9 @@ public class CF282A
 
         int x = 0;
 
+        /*
+         * A loop that follows the sentences and determines the contents of the commands
+         */
         for (int i = 0; i < n; i++) {
             if (sentences[i].contains("++")) {
                 x += 1;
