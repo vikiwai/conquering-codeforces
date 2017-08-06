@@ -27,5 +27,17 @@ public class CF148A
         }
 
         int d = Integer.valueOf(scanner.nextLine());
+
+        int affected = 0;
+
+        for (int i = 0; i < d; i++) {
+            for (int j = 0; j < damages.length; j++) {
+                if (i % damages[j] == 0) {
+                    affected += 1;
+
+                    break;
+                }
+            }
+        }
     }
 }
