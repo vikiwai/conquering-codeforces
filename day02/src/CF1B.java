@@ -84,8 +84,7 @@ public class CF1B
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int n = scanner.nextInt();
-        scanner.nextLine();
+        int n = Integer.parseInt(scanner.nextLine());
 
         String[] cells = new String[n];
 
@@ -94,7 +93,7 @@ public class CF1B
         }
 
         /*
-         * The loop that passes through cells and calls the desired method
+         * The loop that passes through cells and calls the desired method for conversion
          */
         for (int i = 0; i < n; i++){
             if (cells[i].matches("R\\d+C\\d+")) {
