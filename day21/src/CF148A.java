@@ -30,9 +30,10 @@ public class CF148A
 
         int affected = 0;
 
-        for (int i = 0; i < d; i++) {
+        for (int i = 1; i <= d; i++) {
             for (int j = 0; j < damages.length; j++) {
-                if (i % damages[j] == 0) {
+
+                if (i % damages[j] == 0 && damages[j] <= d) {
                     affected += 1;
 
                     break;
