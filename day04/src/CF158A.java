@@ -22,6 +22,7 @@ public class CF158A
 
         int n = scanner.nextInt();
         int k = scanner.nextInt();
+        scanner.nextLine();
 
         int[] numbers = new int[n];
 
@@ -31,6 +32,9 @@ public class CF158A
 
         int count = 0;
 
+        /*
+         * The loop for passage through numbers
+         */
         for (int i = n - 1; i >= 0; i--) {
             if (numbers[i] >= numbers[k-1] && numbers[i] > 0){
                 count += 1;
