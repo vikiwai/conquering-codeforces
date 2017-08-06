@@ -36,6 +36,9 @@ public class CF213A
 
             scanner.nextLine();
 
+            /*
+             * The condition for calculating tasks (if at least two guys are sure of the decision)
+             */
             if (Petya + Vasya + Tonya >= 2) {
                 count +=1;
             }
