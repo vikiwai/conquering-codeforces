@@ -56,7 +56,7 @@ public class CF419A
         for (int counter = 0; counter <= 1440; counter++){
             int hours = Integer.parseInt(array[0]);
             int minutes = Integer.parseInt(array[1]);
-            
+
             minutes += counter;
 
             /*
