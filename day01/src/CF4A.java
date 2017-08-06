@@ -23,6 +23,9 @@ public class CF4A
 
         int weight = Integer.parseInt(scanner.nextLine());
 
+        /*
+         * Checking the parity of the weight
+         */
         if (weight % 2 == 0 && weight > 2) {
             System.out.println("YES");
         }

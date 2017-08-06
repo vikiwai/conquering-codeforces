@@ -23,6 +23,9 @@ public class CF1A
         long m = scanner.nextInt();
         long a = scanner.nextInt();
 
-        System.out.println((long) Math.ceil((double)n/a)*(long) Math.ceil((double)m/a));
+        /*
+         * Output with rounding
+         */
+        System.out.println((long) Math.ceil((double) n / a)*(long) Math.ceil((double) m / a));
     }
 }
