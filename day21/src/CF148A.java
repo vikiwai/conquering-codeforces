@@ -12,10 +12,19 @@
  *  Выходные данные: Выведите количество пострадавших драконов.
  */
 
+import java.util.Scanner;
+
 public class CF148A
 {
     public static void main(String[] args)
     {
-        
+        Scanner scanner = new Scanner(System.in);
+
+        int k = Integer.valueOf(scanner.nextLine());
+        int l = Integer.valueOf(scanner.nextLine());
+        int m = Integer.valueOf(scanner.nextLine());
+        int n = Integer.valueOf(scanner.nextLine());
+
+        int d = Integer.valueOf(scanner.nextLine());
     }
 }
