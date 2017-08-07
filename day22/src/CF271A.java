@@ -19,5 +19,17 @@ public class CF271A
         Scanner scanner = new Scanner(System.in);
 
         int year = Integer.parseInt(scanner.nextLine());
+
+        for (int i = year + 1; i <= 9012; i++) {
+            char[] numbers = String.valueOf(i).toCharArray();
+
+            if (numbers[0] != numbers[1] && numbers[0] != numbers[2] && numbers[0] != numbers[3]
+                    && numbers[1] != numbers[2] && numbers[1] != numbers[3] && numbers[2] != numbers[3]) {
+
+                System.out.println(i);
+
+                break;
+            }
+        }
     }
 }
