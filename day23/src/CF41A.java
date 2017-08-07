@@ -22,5 +22,12 @@ public class CF41A
 
         String s = scanner.nextLine();
         String t = scanner.nextLine();
+
+        if (t.equals(new StringBuffer(s).reverse().toString())) {
+            System.out.println("YES");
+        }
+        else {
+            System.out.println("NO");
+        }
     }
 }
