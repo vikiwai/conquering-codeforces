@@ -12,10 +12,15 @@
  *  Выходные данные: Если слово t является словом s, записанным наоборот, выведите YES, иначе выведите NO.
  */
 
+import java.util.Scanner;
+
 public class CF41A
 {
     public static void main(String[] args)
     {
-        
+        Scanner scanner = new Scanner(System.in);
+
+        String s = scanner.nextLine();
+        String t = scanner.nextLine();
     }
 }
