@@ -10,10 +10,14 @@
  *                   все цифры различны. Гарантируется, что ответ существует.
  */
 
+import java.util.Scanner;
+
 public class CF271A
 {
     public static void main(String[] args)
     {
-        
+        Scanner scanner = new Scanner(System.in);
+
+        int year = Integer.parseInt(scanner.nextLine());
     }
 }
