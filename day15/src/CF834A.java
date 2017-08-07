@@ -34,8 +34,7 @@ public class CF834A
         char initial_position = positions[0];
         char end_position = positions[2];
 
-        int n = scanner.nextInt();
-        scanner.nextLine();
+        int n = Integer.parseInt(scanner.nextLine());
 
         n = n % 4;
 
