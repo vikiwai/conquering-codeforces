@@ -37,7 +37,7 @@ public class CF337A
 
         int min = 1000;
         int max = 4;
-        int difference = max - min;
+        int difference = min - max;
 
         for (int i = 0; i < m - n; i++) {
             for (int j = i; j < i + n; j++) {
@@ -45,7 +45,7 @@ public class CF337A
                 if (fragments[j] < min) {
                     min = fragments[j];
                 }
-
+                
                 if (fragments[j] > max) {
                     max = fragments[j];
                 }
