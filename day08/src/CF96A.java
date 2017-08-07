@@ -22,6 +22,9 @@ public class CF96A
 
         int danger = 1;
 
+        /*
+         * A loop that evaluates players
+         */
         for (int i = 0; i < situation.length - 1; i++) {
             if (situation[i] == situation[i+1]) {
                 danger += 1;
