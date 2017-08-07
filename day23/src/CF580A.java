@@ -17,6 +17,25 @@ public class CF580A
 {
     public static void main(String[] args)
     {
+        Scanner scanner = new Scanner(System.in);
 
+        int n = Integer.parseInt(scanner.nextLine());
+        int[] numbers = new int[n];
+
+        int length = 0;
+        int max_length = 0;
+
+        for (int i = 0; i < numbers.length - 1; i++) {
+            if (numbers[i] <= numbers[i + 1]) {
+                length += 1;
+            }
+            else {
+                if (max_length < length) {
+                    max_length = length;
+                }
+
+                length = 0;
+            }
+        }
     }
 }
