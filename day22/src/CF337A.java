@@ -55,5 +55,7 @@ public class CF337A
                 }
             }
         }
+
+        System.out.println(difference);
     }
 }
