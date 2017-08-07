@@ -23,9 +23,10 @@ public class CF580A
         int[] numbers = new int[n];
 
         int length = 0;
-        int max_length = 0;
+        int max_length = 1;
 
         for (int i = 0; i < numbers.length - 1; i++) {
+
             if (numbers[i] <= numbers[i + 1]) {
                 length += 1;
             }
