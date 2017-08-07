@@ -16,6 +16,7 @@
  *                   минимальным количеством фрагментов среди пазлов, которые должна приобрести учительница.
  */
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class CF337A
@@ -35,11 +36,14 @@ public class CF337A
 
         scanner.nextLine();
 
-        int min = 1000;
-        int max = 4;
-        int difference = min - max;
+        Arrays.sort(fragments);
 
-        for (int i = 0; i < m - n; i++) {
+        int difference = -1;
+
+        for (int i = 0; i <= m - n; i++) {
+            int min = 1000;
+            int max = 4;
+
             for (int j = i; j < i + n; j++) {
 
                 if (fragments[j] < min) {
@@ -51,7 +55,7 @@ public class CF337A
                 }
             }
 
-            if (max - min < difference) {
+            if (difference == -1 || max - min < difference) {
                 difference = max - min;
             }
         }
