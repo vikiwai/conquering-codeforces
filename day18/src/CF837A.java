@@ -17,8 +17,7 @@ public class CF837A
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int n = scanner.nextInt();
-        scanner.nextLine();
+        int n = Integer.parseInt(scanner.nextLine());
 
         String line = scanner.nextLine();
 
