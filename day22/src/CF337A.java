@@ -34,5 +34,26 @@ public class CF337A
         }
 
         scanner.nextLine();
+
+        int min = 1000;
+        int max = 4;
+        int difference = max - min;
+
+        for (int i = 0; i < m - n; i++) {
+            for (int j = i; j < i + n; j++) {
+
+                if (fragments[j] < min) {
+                    min = fragments[j];
+                }
+
+                if (fragments[j] > max) {
+                    max = fragments[j];
+                }
+
+                if (max - min < difference) {
+                    difference = max - min;
+                }
+            }
+        }
     }
 }
