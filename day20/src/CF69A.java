@@ -27,6 +27,9 @@ public class CF69A
         int n = scanner.nextInt();
         scanner.nextLine();
 
+        /*
+         * The initial coordinates of the vector
+         */
         int xi = 0;
         int yi = 0;
         int zi = 0;
