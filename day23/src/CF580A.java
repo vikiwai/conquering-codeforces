@@ -22,20 +22,30 @@ public class CF580A
         int n = Integer.parseInt(scanner.nextLine());
         int[] numbers = new int[n];
 
-        int length = 0;
+        for (int i = 0; i < n; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+
+        scanner.nextLine();
+
+        int length = 1;
         int max_length = 1;
 
         for (int i = 0; i < numbers.length - 1; i++) {
 
             if (numbers[i] <= numbers[i + 1]) {
                 length += 1;
+
+                if (max_length < length) {
+                    max_length = length;
+                }
             }
             else {
                 if (max_length < length) {
                     max_length = length;
                 }
 
-                length = 0;
+                length = 1;
             }
         }
 
