@@ -48,6 +48,9 @@ public class CF263A
             }
         }
 
+        /*
+         * A loop for working with lines
+         */
         while (index_i != 2) {
             if (index_i < 2) {
                 index_i += 1;
@@ -59,6 +62,9 @@ public class CF263A
             }
         }
 
+        /*
+         * A loop for working with rows
+         */
         while (index_j != 2) {
             if (index_j < 2) {
                 index_j += 1;
