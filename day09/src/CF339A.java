@@ -27,6 +27,7 @@ public class CF339A
         for (int i = sum.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (Integer.valueOf(sum[j]) >= Integer.valueOf(sum[j + 1])) {
+
                     String temp = sum[j];
                     sum[j] = sum[j + 1];
                     sum[j + 1] = temp;
@@ -35,5 +36,11 @@ public class CF339A
         }
 
         line = sum[0];
+
+        for (int i = 1; i < sum.length; i++) {
+            line += "+" + sum[i];
+        }
+
+        System.out.println(line);
     }
 }
