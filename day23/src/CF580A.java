@@ -37,5 +37,7 @@ public class CF580A
                 length = 0;
             }
         }
+
+        System.out.println(max_length);
     }
 }
