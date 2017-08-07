@@ -45,14 +45,14 @@ public class CF337A
                 if (fragments[j] < min) {
                     min = fragments[j];
                 }
-                
+
                 if (fragments[j] > max) {
                     max = fragments[j];
                 }
+            }
 
-                if (max - min < difference) {
-                    difference = max - min;
-                }
+            if (max - min < difference) {
+                difference = max - min;
             }
         }
 
