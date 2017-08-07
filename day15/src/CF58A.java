@@ -21,6 +21,9 @@ public class CF58A
 
         char[] letters = "hello".toCharArray();
 
+        /*
+         * A loop to find the index of elements
+         */
         for (int i = 0; i < letters.length; i++) {
             int index = line.indexOf(letters[i]);
 
