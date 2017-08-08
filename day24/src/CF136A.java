@@ -16,9 +16,21 @@
  *                   которого получил подарок друг с номером i.
  */
 
+import java.util.Scanner;
+
 public class CF136A
 {
     public static void main(String[] args) {
-	
+        Scanner scanner = new Scanner(System.in);
+
+        int n = Integer.parseInt(scanner.nextLine());
+
+        int[] friends = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            friends[i] = scanner.nextInt();
+        }
+
+        scanner.nextLine();
     }
 }
