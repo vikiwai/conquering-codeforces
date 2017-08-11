@@ -49,7 +49,7 @@ public class CF208A
                 }
             }
         }
-
+        
         System.out.println(output);
     }
 }
