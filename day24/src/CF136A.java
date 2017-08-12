@@ -32,7 +32,7 @@ public class CF136A
         }
 
         scanner.nextLine();
-        
+
         int[] gifts = new  int[n];
 
         for (int i = 0; i < n; i++) {
