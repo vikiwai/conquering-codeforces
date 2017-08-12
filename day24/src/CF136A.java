@@ -33,12 +33,18 @@ public class CF136A
 
         scanner.nextLine();
 
+        /*     &        &
+         * 1 - 2    0 - 1
+         * 2 - 3    1 - 2
+         * 3 - 4    2 - 3
+         * 4 - 1    3 - 0
+         */
         int[] gifts = new  int[n];
 
         for (int i = 0; i < n; i++) {
-            gifts[i] = friends[i] - 1;
+            gifts[friends[i] - 1] = i + 1;
 
-            System.out.print(gifts[i]);
+            System.out.print(gifts[friends[i] - 1]);
             System.out.print(" ");
         }
     }
