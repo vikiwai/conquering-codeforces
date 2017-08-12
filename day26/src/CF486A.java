@@ -8,10 +8,29 @@
  *  Выходные данные: Выведите f(n) в единственной строке.
  */
 
+import java.util.Scanner;
+
 public class CF486A
 {
+    private static int function(int n)
+    {
+        int k = 1;
+        int sum = 0;
+
+        while (k <= n) {
+            sum += k * Math.pow(-1, k);
+            k +=1;
+        }
+
+        return sum;
+    }
+
     public static void main(String[] args)
     {
+        Scanner scanner = new Scanner(System.in);
 
+        int n = Integer.parseInt(scanner.nextLine());
+
+        System.out.println(function(n));
     }
 }
