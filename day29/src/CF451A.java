@@ -23,5 +23,12 @@ public class CF451A
         int n = scanner.nextInt();
         int m = scanner.nextInt();
         scanner.nextLine();
+
+        if (Math.min(n, m) % 2 == 0) {
+            System.out.println("Malvika");
+        }
+        else {
+            System.out.println("Akshat");
+        }
     }
 }
