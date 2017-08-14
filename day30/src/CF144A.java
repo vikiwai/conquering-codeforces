@@ -18,6 +18,7 @@
  *                   чтобы получившийся строй понравился генералу.
  */
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class CF144A
@@ -33,5 +34,14 @@ public class CF144A
         for (int i = 0; i < growth.length; i++) {
             growth[i] = scanner.nextInt();
         }
+
+        int[] copy = Arrays.copyOf(growth, growth.length);
+
+        Arrays.sort(copy);
+
+        int min = Arrays.asList(growth).indexOf(copy[0]);
+        int max = Arrays.asList(growth).indexOf(copy[copy.length]);
+
+        
     }
 }
