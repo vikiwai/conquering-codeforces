@@ -26,5 +26,22 @@ public class CF208A
         Scanner scanner = new Scanner(System.in);
 
         String remix = scanner.nextLine();
+
+        String[] origin = remix.replaceAll("WUB", " ").split(" ");
+
+        String[] fin = new String[origin.length];
+
+        for (int i = 0; i < origin.length; i++) {
+            if (origin[i].equals(" ")) {
+                fin[i] = "*".toString();
+            }
+            else {
+                fin[i] = origin[i];
+            }
+        }
+
+        for (int i = 0; i < origin.length; i++) {
+            System.out.println(fin[i]);
+        }
     }
 }

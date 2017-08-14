@@ -20,7 +20,8 @@ import java.util.Scanner;
 
 public class CF136A
 {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         Scanner scanner = new Scanner(System.in);
 
         int n = Integer.parseInt(scanner.nextLine());
@@ -35,6 +36,9 @@ public class CF136A
 
         int[] gifts = new  int[n];
 
+        /*
+         * Reading information about the person who made the gift
+         */
         for (int i = 0; i < n; i++) {
             gifts[friends[i] - 1] = i + 1;
         }

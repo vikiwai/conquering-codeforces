@@ -38,6 +38,10 @@ public class CF479A
             max_sum = a * b * c;
         }
 
+        if (a + b + c > max_sum) {
+            max_sum = a + b + c;
+        }
+
         System.out.println(max_sum);
     }
 }

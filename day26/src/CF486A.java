@@ -12,25 +12,18 @@ import java.util.Scanner;
 
 public class CF486A
 {
-    private static int function(int n)
-    {
-        int k = 1;
-        int sum = 0;
-
-        while (k <= n) {
-            sum += k * Math.pow(-1, k);
-            k +=1;
-        }
-
-        return sum;
-    }
-
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
 
-        int n = Integer.parseInt(scanner.nextLine());
+        long n = scanner.nextLong();
+        scanner.nextLine();
 
-        System.out.println(function(n));
+        if (n % 2 == 0) {
+            System.out.println(n / 2);
+        }
+        else {
+            System.out.println((n + 1) / (-2));
+        }
     }
 }
