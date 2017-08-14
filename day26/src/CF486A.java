@@ -16,8 +16,7 @@ public class CF486A
     {
         Scanner scanner = new Scanner(System.in);
 
-        long n = scanner.nextLong();
-        scanner.nextLine();
+        long n = Long.parseLong(scanner.nextLine());
 
         if (n % 2 == 0) {
             System.out.println(n / 2);
