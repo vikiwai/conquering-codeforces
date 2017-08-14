@@ -25,7 +25,7 @@ public class CF479A
         int c = Integer.parseInt(scanner.nextLine());
 
         int max_sum = 0;
-
+        
         if ((a + b) * c > max_sum) {
             max_sum = (a + b) * c;
         }
