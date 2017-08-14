@@ -18,10 +18,20 @@
  *                   чтобы получившийся строй понравился генералу.
  */
 
+import java.util.Scanner;
+
 public class CF144A
 {
     public static void main(String[] args)
     {
-        
+        Scanner scanner = new Scanner(System.in);
+
+        int n = Integer.parseInt(scanner.nextLine());
+
+        int[] growth = new int[n];
+
+        for (int i = 0; i < growth.length; i++) {
+            growth[i] = scanner.nextInt();
+        }
     }
 }
