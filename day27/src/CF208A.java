@@ -27,21 +27,29 @@ public class CF208A
 
         String remix = scanner.nextLine();
 
-        String[] origin = remix.replaceAll("WUB", " ").split(" ");
+        char[] origin = remix.replaceAll("WUB", "*").toCharArray();
 
-        String[] fin = new String[origin.length];
-
-        for (int i = 0; i < origin.length; i++) {
-            if (origin[i].equals(" ")) {
-                fin[i] = "*".toString();
-            }
-            else {
-                fin[i] = origin[i];
+        for (int i = 0; i < origin.length - 1; i++) {
+            if (origin[i] == origin[i + 1] && origin[i] == '*') {
+                origin[i] = '?';
             }
         }
 
+        String output = "";
+
         for (int i = 0; i < origin.length; i++) {
-            System.out.println(fin[i]);
+
+            if (origin[i] != '?') {
+                if (origin[i] == '*') {
+                    if (i != 0 && i != origin.length - 1) {
+                        output = output.concat(" ");
+                    }
+                } else {
+                    output = output.concat(String.valueOf(origin[i]));
+                }
+            }
         }
+
+        System.out.println(output);
     }
 }
