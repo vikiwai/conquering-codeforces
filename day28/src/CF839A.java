@@ -33,7 +33,6 @@ public class CF839A
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = scanner.nextInt();
         }
-
         scanner.nextLine();
 
         int q = 0;
