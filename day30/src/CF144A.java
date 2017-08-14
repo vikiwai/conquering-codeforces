@@ -18,6 +18,8 @@
  *                   чтобы получившийся строй понравился генералу.
  */
 
+import jdk.nashorn.internal.runtime.arrays.ArrayIndex;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -35,13 +37,21 @@ public class CF144A
             growth[i] = scanner.nextInt();
         }
 
-        int[] copy = Arrays.copyOf(growth, growth.length);
+        int max = growth[0];
+        int index_max = 0;
 
-        Arrays.sort(copy);
+        int min = growth[n - 1];
+        int index_min = n - 1;
 
-        int min = Arrays.asList(growth).indexOf(copy[0]);
-        int max = Arrays.asList(growth).indexOf(copy[copy.length - 1]);
-
-        System.out.println(max + min - 2);
+        for (int i = 0; i < growth.length; i++) {
+            if (growth[i] > max) {
+                index_max = i;
+            }
+            if (growth[i] < min) {
+                index_min = i;
+            }
+        }
+        
+        System.out.println(index_max + index_min - 2);
     }
 }
