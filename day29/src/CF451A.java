@@ -12,10 +12,16 @@
  *  Выходные данные: Выведите "Akshat" или "Malvika", в зависимости от того, кто победит при оптимальной игре.
  */
 
+import java.util.Scanner;
+
 public class CF451A
 {
     public static void main(String[] args)
     {
-        
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        int m = scanner.nextInt();
+        scanner.nextLine();
     }
 }
