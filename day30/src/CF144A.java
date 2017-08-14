@@ -40,8 +40,8 @@ public class CF144A
         Arrays.sort(copy);
 
         int min = Arrays.asList(growth).indexOf(copy[0]);
-        int max = Arrays.asList(growth).indexOf(copy[copy.length]);
+        int max = Arrays.asList(growth).indexOf(copy[copy.length - 1]);
 
-        
+        System.out.println(max + min - 2);
     }
 }
