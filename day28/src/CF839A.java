@@ -16,10 +16,51 @@
  *                   Арье, чтобы дать Брану k конфет до конца n-го дня.
  */
 
+import java.util.Scanner;
+
 public class CF839A
 {
     public static void main(String[] args)
     {
-	
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        int k = scanner.nextInt();
+        scanner.nextLine();
+
+        int[] numbers = new int[n];
+
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+
+        scanner.nextLine();
+
+        int q = 0;
+
+        while (k > 0) {
+
+            if (q + 1 > n) {
+                break;
+            }
+
+            if (numbers[q] > 8) {
+                if (q + 1 < n) {
+                    numbers[q + 1] += (numbers[q] - 8);
+                }
+                numbers[q] = 8;
+            }
+
+            k -= numbers[q];
+
+            q += 1;
+        }
+
+        if (k > 0) {
+            System.out.println("-1");
+        }
+        else {
+            System.out.println(q);
+        }
     }
 }
