@@ -14,10 +14,14 @@
  *                   Если есть несколько правильных ответов, можно вывести любой из них.
  */
 
+import java.util.Scanner;
+
 public class CF472A
 {
     public static void main(String[] args)
     {
-        
+        Scanner scanner = new Scanner(System.in);
+
+        int n = Integer.parseInt(scanner.nextLine());
     }
 }
