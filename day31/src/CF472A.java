@@ -18,7 +18,7 @@ import java.util.Scanner;
 
 public class CF472A
 {
-    public static boolean is_prime(int n)
+    private static boolean is_prime(int n)
     {
         for (int i = n - 1; i > 1; i--) {
             if (n % i == 0) {
