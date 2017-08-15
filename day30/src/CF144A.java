@@ -18,7 +18,6 @@
  *                   чтобы получившийся строй понравился генералу.
  */
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class CF144A
@@ -55,34 +54,24 @@ public class CF144A
             output += 1;
         }
 
-        /*
-        System.out.println(output);
-        for (int i = 0; i < growth.length; i++) {
-            System.out.print(growth[i]);
-            System.out.print(" ");
-        }
-        */
-        
-        /*
         int min = 101;
-        int index_min = n + 1;
+        int index_min = n;
 
         for (int i = 0; i < growth.length; i++) {
-            if (growth[i] < min) {
-
-                for (int j = index_max; j < i; i++) {
-                    int temp = growth[j];
-                    growth[j] = growth[j + 1];
-                    growth[j + 1] = temp;
-                }
-
+            if (growth[i] <= min) {
+                min = growth[i];
                 index_min = i;
             }
         }
 
-        output += (n - 1 - index_min);
+        for (int i = index_min; i < growth.length - 1; i++) {
+            int temp = growth[i];
+            growth[i] = growth[i + 1];
+            growth[i + 1] = temp;
+
+            output += 1;
+        }
 
         System.out.println(output);
-        */
     }
 }
