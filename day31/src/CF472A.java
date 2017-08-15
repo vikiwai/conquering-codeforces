@@ -14,47 +14,34 @@
  *                   Если есть несколько правильных ответов, можно вывести любой из них.
  */
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class CF472A
 {
+    public static boolean is_prime(int n)
+    {
+        for (int i = n - 1; i > 1; i--) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
 
         int n = Integer.parseInt(scanner.nextLine());
 
-        int[] compound_numbers = new int[n];
-        int k = 0;
+        for (int i = n - 1; i > 0; i--) {
+            if (!is_prime(i) && !is_prime(n - i)) {
+                System.out.println(i + " " + (n - i));
 
-        for (int i = 4; i < n; i++) {
-            for (int j = 2; j < i; j++) {
-                if (i % j == 0) {
-                    compound_numbers[k++] = i;
-
-                    break;
-                }
-            }
-        }
-
-        int[] numbers = Arrays.copyOf(compound_numbers, k);
-
-        boolean output = false;
-
-        for (int i = numbers.length - 1; i > 0; i--) {
-            for (int j = 0; j < i; j++) {
-                if (numbers[i] + numbers[j] == n) {
-                    System.out.println(numbers[i] + " " + numbers[j]);
-
-                    output = true;
-                    break;
-                }
-            }
-
-            if (output){
                 break;
             }
         }
     }
 }
+
