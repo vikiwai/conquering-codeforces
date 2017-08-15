@@ -23,5 +23,19 @@ public class CF472A
         Scanner scanner = new Scanner(System.in);
 
         int n = Integer.parseInt(scanner.nextLine());
+
+        int[] compound_nambers = new int[n];
+        int k = 0;
+
+        for (int i = 4; i <= n; i++) {
+            for (int j = 2; j <= i; j++) {
+                if (j != i && i % j == 0) {
+                    compound_nambers[k] = i;
+                    k += 1;
+
+                    break;
+                }
+            }
+        }
     }
 }
