@@ -10,10 +10,25 @@
  *                   из точки 0 в точку x.
  */
 
+import java.util.Scanner;
+
 public class CF617A
 {
     public static void main(String[] args)
     {
+        Scanner scanner = new Scanner(System.in);
 
+        int n = Integer.parseInt(scanner.nextLine());
+
+        int k = 0;
+        int q = 5;
+
+        while (n > 0) {
+            k += (n / q);
+            n = n % q;
+            q -= 1;
+        }
+
+        System.out.println(k);
     }
 }
