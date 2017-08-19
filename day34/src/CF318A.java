@@ -10,10 +10,23 @@
  *  Выходные данные: Выведите число, которое окажется на позиции с номером k в тетрадке Володи.
  */
 
+import java.util.Scanner;
+
 public class CF318A
 {
     public static void main(String[] args)
     {
+        Scanner scanner = new Scanner(System.in);
 
+        long n = scanner.nextLong();
+        long k = scanner.nextLong();
+        scanner.nextLine();
+
+        if (k <= Math.ceil(n / 2.0)) {
+            System.out.println((long)(2 * k - 1));
+        }
+        else {
+            System.out.println((long)(2 * (k - Math.ceil(n / 2.0))));
+        }
     }
 }
