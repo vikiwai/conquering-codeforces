@@ -26,6 +26,10 @@ public class CF460A
         while (n > 0) {
             n -= 1;
             day += 1;
+
+            /*
+             * Every 'm'-th day mom buys Vasya one pair of socks
+             */
             if (day % m == 0) {
                 n += 1;
             }
