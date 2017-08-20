@@ -24,5 +24,10 @@ public class CF82A
         Scanner scanner = new Scanner(System.in);
 
         int n = Integer.parseInt(scanner.nextLine());
+
+        while (n > 5) {
+            n -= 5;
+            n = (n + 1) / 2;
+        }
     }
 }
