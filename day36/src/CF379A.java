@@ -9,10 +9,32 @@
  *  Выходные данные: Выведите единственное целое число — количество часов, которое Василий сможет освещать комнату.
  */
 
+import java.util.Scanner;
+
 public class CF379A
 {
     public static void main(String[] args)
     {
-        
+        Scanner scanner = new Scanner(System.in);
+
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        scanner.nextLine();
+
+        int time = 0;
+
+        while (a > 0) {
+            a -= 1;
+            time += 1;
+
+            /*
+             * From 'b' extinct candles he can get one new candle
+             */
+            if (time % b == 0) {
+                a += 1;
+            }
+        }
+
+        System.out.println(time);
     }
 }
