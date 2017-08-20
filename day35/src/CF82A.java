@@ -29,5 +29,9 @@ public class CF82A
             n -= 5;
             n = (n + 1) / 2;
         }
+
+        String[] array = {"Sheldon", "Leonard", "Penny", "Rajesh", "Howard"};
+
+        System.out.println(array[n - 1]);
     }
 }
