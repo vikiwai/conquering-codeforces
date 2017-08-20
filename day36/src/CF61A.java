@@ -16,10 +16,28 @@
  *  Выходные данные: Выведите соответствующий ответ. Обязательно выводите лидирующие нули.
  */
 
+import java.util.Scanner;
+
 public class CF61A
 {
     public static void main(String[] args)
     {
+        Scanner scanner = new Scanner(System.in);
 
+        char[] line_1 = scanner.nextLine().toCharArray();
+        char[] line_2 = scanner.nextLine().toCharArray();
+
+        char[] output = new char[line_1.length];
+
+        for (int i = 0; i < output.length; i++) {
+            if (line_1[i] == line_2[i]) {
+                output[i] = '0';
+            }
+            else {
+                output[i] = '1';
+            }
+        }
+
+        System.out.println(String.valueOf(output));
     }
 }
