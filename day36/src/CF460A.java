@@ -20,5 +20,17 @@ public class CF460A
         int n = scanner.nextInt();
         int m = scanner.nextInt();
         scanner.nextLine();
+
+        int day = 0;
+
+        while (n > 0) {
+            n -= 1;
+            day += 1;
+            if (day % m == 0) {
+                n += 1;
+            }
+        }
+
+        System.out.println(day);
     }
 }
