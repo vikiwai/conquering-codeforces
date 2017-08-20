@@ -9,6 +9,16 @@
  *  Выходные данные: Выведите единственное целое число — ответ на задачу.
  */
 
+import java.util.Scanner;
+
 public class CF460A
 {
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        int m = scanner.nextInt();
+        scanner.nextLine();
+    }
 }
