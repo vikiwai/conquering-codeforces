@@ -26,8 +26,9 @@ public class CF344A
         char[] array = new char[2 * n];
 
         for (int i = 0; i < array.length - 1; i += 2) {
-            array[i] = scanner.nextLine().toCharArray()[0];
-            array[i + 1] = scanner.nextLine().toCharArray()[1];
+            String line = scanner.nextLine();
+            array[i] = line.toCharArray()[0];
+            array[i + 1] = line.toCharArray()[1];
         }
 
         int k = 1;
