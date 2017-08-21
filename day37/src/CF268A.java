@@ -39,7 +39,7 @@ public class CF268A
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if (home_colours[i] == home_colours[j]) {
+                if (home_colours[i] == exit_colours[j]) {
                     k += 1;
                 }
             }
