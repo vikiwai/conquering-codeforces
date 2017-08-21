@@ -13,10 +13,21 @@
  *  Выходные данные: В единственной строке выходных данных выведите количество «островков», получившихся в ряду.
  */
 
+import java.util.Scanner;
+
 public class CF344A
 {
     public static void main(String[] args)
     {
-	// write your code here
+        Scanner scanner = new Scanner(System.in);
+
+        int n = Integer.parseInt(scanner.nextLine());
+
+        char[] array = new char[2 * n];
+
+        for (int i = 0; i < array.length - 1; i += 2) {
+            array[i] = scanner.nextLine().toCharArray()[0];
+            array[i + 1] = scanner.nextLine().toCharArray()[1];
+        }
     }
 }
