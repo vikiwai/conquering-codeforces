@@ -34,5 +34,15 @@ public class CF268A
             exit_colours[i] = scanner.nextInt();
             scanner.nextLine();
         }
+
+        int k = 0;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (home_colours[i] == home_colours[j]) {
+                    k += 1;
+                }
+            }
+        }
     }
 }
