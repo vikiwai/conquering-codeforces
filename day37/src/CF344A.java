@@ -29,5 +29,13 @@ public class CF344A
             array[i] = scanner.nextLine().toCharArray()[0];
             array[i + 1] = scanner.nextLine().toCharArray()[1];
         }
+
+        int k = 1;
+
+        for (int i = 1; i < array.length - 1; i += 2) {
+            if (array[i] == array[i + 1]) {
+                k += 1;
+            }
+        }
     }
 }
