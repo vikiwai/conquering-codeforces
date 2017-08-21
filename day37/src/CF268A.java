@@ -16,10 +16,23 @@
  *  Выходные данные: В строке выведите количество матчей, в которых домашняя команда выступит в выездной форме.
  */
 
+import java.util.Scanner;
+
 public class CF268A
 {
     public static void main(String[] args)
     {
-        
+        Scanner scanner = new Scanner(System.in);
+
+        int n = Integer.parseInt(scanner.nextLine());
+
+        int[] home_colours = new int[n];
+        int[] exit_colours = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            home_colours[i] = scanner.nextInt();
+            exit_colours[i] = scanner.nextInt();
+            scanner.nextLine();
+        }
     }
 }
