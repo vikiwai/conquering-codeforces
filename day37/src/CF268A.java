@@ -44,5 +44,7 @@ public class CF268A
                 }
             }
         }
+
+        System.out.println(k);
     }
 }
