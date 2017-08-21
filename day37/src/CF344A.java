@@ -37,5 +37,7 @@ public class CF344A
                 k += 1;
             }
         }
+
+        System.out.println(k);
     }
 }
