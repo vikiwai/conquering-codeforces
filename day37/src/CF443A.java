@@ -19,22 +19,24 @@ public class CF443A
     {
         Scanner scanner = new Scanner(System.in);
 
-       char[] line = scanner.nextLine().toCharArray();
+        char[] line = scanner.nextLine().toCharArray();
 
-       char[] letters = new char[line.length - (line.length / 3) * 2];
-       int n = 0;
+        char[] letters = new char[line.length - (line.length / 3) * 2];
+        int n = 0;
 
-       for (int i = 1; i < line.length - 1; i +=3) {
-           for (int j = 0; j < letters.length; j++) {
-               if (line[i] == letters[j]) {
+        for (int i = 1; i < line.length - 1; i +=3) {
+            for (int j = 0; j < letters.length; j++) {
+                if (line[i] == letters[j]) {
                    break;
-               }
+                }
 
-               if (j == letters.length - 1) {
+                if (j == letters.length - 1) {
                    letters[n] = line[i];
                    n += 1;
-               }
-           }
-       }
+                }
+            }
+        }
+
+        System.out.println(n);
     }
 }
