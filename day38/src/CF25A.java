@@ -31,8 +31,8 @@ public class CF25A
         int index = -1;
 
         for (int i = 0; i < numbers.length - 1; i++) {
-            if (numbers[i] % 2 != numbers[i + 1]) {
-                index = i;
+            if (numbers[i] % 2 != numbers[i + 1] % 2) {
+                index = i + 1;
             }
         }
 
