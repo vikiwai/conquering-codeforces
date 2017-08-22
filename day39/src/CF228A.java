@@ -37,6 +37,6 @@ public class CF228A
             }
         }
 
-
+        System.out.println(k);
     }
 }
