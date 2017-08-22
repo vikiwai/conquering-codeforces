@@ -30,9 +30,10 @@ public class CF228A
         int k = 0;
 
         for (int i = 0; i < array.length; i++) {
-            for (int j = i; j < array.length; j++) {
+            for (int j = i + 1; j < array.length; j++) {
                 if (array[i] == array[j]) {
                     k += 1;
+                    break;
                 }
             }
         }
