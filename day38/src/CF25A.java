@@ -45,6 +45,11 @@ public class CF25A
             }
         }
 
-        System.out.println(index);
+        if (count_even > count_uneven) {
+            System.out.println(index_uneven);
+        }
+        else {
+            System.out.println(index_even);
+        }
     }
 }
