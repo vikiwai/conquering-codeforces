@@ -11,10 +11,21 @@
  *                   1 в том порядке, в котором они заданы во входных данных.
  */
 
+import java.util.Scanner;
+
 public class CF25A
 {
     public static void main(String[] args)
     {
+        Scanner scanner = new Scanner(System.in);
 
+        int n = Integer.parseInt(scanner.nextLine());
+
+        int[] numbers = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+        scanner.nextLine();
     }
 }
