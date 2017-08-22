@@ -28,11 +28,20 @@ public class CF25A
         }
         scanner.nextLine();
 
-        int index = -1;
+        int count_even = 0;
+        int count_uneven = 0;
 
-        for (int i = 0; i < numbers.length - 1; i++) {
-            if (numbers[i] % 2 != numbers[i + 1] % 2) {
-                index = i + 1;
+        int index_even = -1;
+        int index_uneven = -1;
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 == 0) {
+                count_even += 1;
+                index_even = i;
+            }
+            else {
+                count_uneven += 1;
+                index_uneven = i;
             }
         }
 
