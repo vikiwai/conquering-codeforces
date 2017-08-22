@@ -12,10 +12,18 @@
  *                   Не выводите пробелы.
  */
 
+import java.util.Scanner;
+
 public class CF510A
 {
     public static void main(String[] args)
     {
+        Scanner scanner = new Scanner(System.in);
 
+        int n = scanner.nextInt();
+        int m = scanner.nextInt();
+        scanner.nextLine();
+
+        
     }
 }
