@@ -35,5 +35,7 @@ public class CF25A
                 index = i;
             }
         }
+
+        System.out.println(index);
     }
 }
