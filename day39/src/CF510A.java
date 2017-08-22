@@ -24,6 +24,33 @@ public class CF510A
         int m = scanner.nextInt();
         scanner.nextLine();
 
-        
+        boolean right = true;
+
+        for (int i = 0; i < n; i++) {
+            if (i % 2 == 1) {
+                if (right) {
+                    for (int j = 0; j < m - 1; j++) {
+                        System.out.print(".");
+                    }
+                    System.out.print("#");
+
+                    right = false;
+                }
+                else {
+                    System.out.print("#");
+                    for (int j = 0; j < m - 1; j++) {
+                        System.out.print(".");
+                    }
+
+                    right = true;
+                }
+            }
+            else {
+                for (int j = 0; j < m; j++) {
+                    System.out.print("#");
+                }
+            }
+            System.out.println();
+        }
     }
 }
