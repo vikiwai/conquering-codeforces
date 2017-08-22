@@ -27,5 +27,13 @@ public class CF25A
             numbers[i] = scanner.nextInt();
         }
         scanner.nextLine();
+
+        int index = -1;
+
+        for (int i = 0; i < numbers.length - 1; i++) {
+            if (numbers[i] % 2 != numbers[i + 1]) {
+                index = i;
+            }
+        }
     }
 }
