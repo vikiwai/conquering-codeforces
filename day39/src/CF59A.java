@@ -13,10 +13,14 @@
  *                   его к верхнему регистру, иначе — к нижнему.
  */
 
+import java.util.Scanner;
+
 public class CF59A
 {
     public static void main(String[] args)
     {
-        
+        Scanner scanner = new Scanner(System.in);
+
+        String line = scanner.nextLine();
     }
 }
