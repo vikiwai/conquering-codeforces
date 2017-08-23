@@ -21,6 +21,17 @@ public class CF59A
     {
         Scanner scanner = new Scanner(System.in);
 
-        String line = scanner.nextLine();
+        char[] line = scanner.nextLine().toCharArray();
+
+        int k = 0;
+
+        for (int i = 0; i < line.length; i++) {
+            if (line[i] == Character.toUpperCase(line[i])) {
+                k += 1;
+            }
+            else {
+                k -=1;
+            }
+        }
     }
 }
