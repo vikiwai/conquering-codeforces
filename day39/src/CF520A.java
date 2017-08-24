@@ -37,7 +37,7 @@ public class CF520A
                 System.out.println("NO");
                 break;
             }
-            
+
             if (i == alphabet.length - 1) {
                 System.out.println("YES");
             }
