@@ -10,10 +10,18 @@
  *  Выходные данные: Выведите «YES», если строка является панграммой, и «NO» в противном случае.
  */
 
+import java.util.Scanner;
+
 public class CF520A
 {
     public static void main(String[] args)
     {
-        
+        Scanner scanner = new Scanner(System.in);
+
+        int n = Integer.parseInt(scanner.nextLine());
+
+        char[] line = scanner.nextLine().toCharArray();
+
+        int[] alphabet = new int[26];
     }
 }

@@ -33,7 +33,7 @@ public class CF59A
                 k -=1;
             }
         }
-        
+
         if (k > 0) {
             System.out.println(String.valueOf(line).toUpperCase());
         }
