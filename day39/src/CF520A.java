@@ -23,5 +23,13 @@ public class CF520A
         char[] line = scanner.nextLine().toCharArray();
 
         int[] alphabet = new int[26];
+
+        for (int i = 0; i < line.length; i++) {
+            for (int j = 0; j < alphabet.length; j++){
+                if (line[i] - 65 == j || line[i] - 97 == j) {
+                    alphabet[j] += 1;
+                }
+            }
+        }
     }
 }
