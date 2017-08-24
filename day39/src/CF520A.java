@@ -31,5 +31,16 @@ public class CF520A
                 }
             }
         }
+
+        for (int i = 0; i < alphabet.length; i++) {
+            if (alphabet[i] == 0) {
+                System.out.println("NO");
+                break;
+            }
+            
+            if (i == alphabet.length - 1) {
+                System.out.println("YES");
+            }
+        }
     }
 }
