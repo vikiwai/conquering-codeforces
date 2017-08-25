@@ -14,9 +14,16 @@
  *                   Если Антон и Даник выиграли поровну партий, выведите «Friendship» (без кавычек).
  */
 
+import java.util.Scanner;
+
 public class CF734A
 {
     public static void main(String[] args)
     {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = Integer.parseInt(scanner.nextLine());
+
+        char[] games = scanner.nextLine().toCharArray();
     }
 }
