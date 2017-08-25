@@ -58,6 +58,11 @@ public class CF141A
             }
         }
 
-        
+        if (truth(name_1) && truth(name_2) && truth(input_line)) {
+            System.out.println("YES");
+        }
+        else {
+            System.out.println("NO");
+        }
     }
 }
