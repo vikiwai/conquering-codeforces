@@ -25,5 +25,16 @@ public class CF734A
         int n = Integer.parseInt(scanner.nextLine());
 
         char[] games = scanner.nextLine().toCharArray();
+
+        int k = 0;
+
+        for (int i = 0; i < games.length; i++) {
+            if (games[i] == 'A') {
+                k += 1;
+            }
+            else {
+                k -= 1;
+            }
+        }
     }
 }
