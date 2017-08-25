@@ -36,5 +36,15 @@ public class CF734A
                 k -= 1;
             }
         }
+
+        if (k > 0) {
+            System.out.println("Anton");
+        }
+        else if (k == 0) {
+            System.out.println("Friendship");
+        }
+        else {
+            System.out.println("Danik");
+        }
     }
 }
