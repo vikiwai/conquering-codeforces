@@ -25,5 +25,27 @@ public class CF141A
         char[] name_1 = scanner.nextLine().toCharArray();
         char[] name_2 = scanner.nextLine().toCharArray();
         char[] input_line = scanner.nextLine().toCharArray();
+
+        for (int i = 0; i < name_1.length; i++) {
+            for (int j = 0; j < input_line.length; j++) {
+                if (name_1[i] == input_line[j]) {
+                    name_1[i] = '*';
+                    input_line[j] = '*';
+
+                    break;
+                }
+            }
+        }
+
+        for (int i = 0; i < name_2.length; i++) {
+            for (int j = 0; j < input_line.length; j++) {
+                if (name_2[i] == input_line[j]) {
+                    name_2[i] = '*';
+                    input_line[j] = '*';
+
+                    break;
+                }
+            }
+        }
     }
 }
