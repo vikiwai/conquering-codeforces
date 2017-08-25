@@ -18,6 +18,16 @@ import java.util.Scanner;
 
 public class CF141A
 {
+    private static boolean truth(char[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] != '*') {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
@@ -47,5 +57,7 @@ public class CF141A
                 }
             }
         }
+
+        
     }
 }
