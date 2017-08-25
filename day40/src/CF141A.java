@@ -41,7 +41,6 @@ public class CF141A
                 if (name_1[i] == input_line[j]) {
                     name_1[i] = '*';
                     input_line[j] = '*';
-
                     break;
                 }
             }
@@ -52,7 +51,6 @@ public class CF141A
                 if (name_2[i] == input_line[j]) {
                     name_2[i] = '*';
                     input_line[j] = '*';
-
                     break;
                 }
             }
