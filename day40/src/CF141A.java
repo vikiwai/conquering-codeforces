@@ -14,10 +14,16 @@
  *                   и «NO» без кавычек в противном случае.
  */
 
+import java.util.Scanner;
+
 public class CF141A
 {
     public static void main(String[] args)
     {
-        
+        Scanner scanner = new Scanner(System.in);
+
+        char[] name_1 = scanner.nextLine().toCharArray();
+        char[] name_2 = scanner.nextLine().toCharArray();
+        char[] input_line = scanner.nextLine().toCharArray();
     }
 }
