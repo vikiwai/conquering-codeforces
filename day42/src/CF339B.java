@@ -32,5 +32,19 @@ public class CF339B
             numbers[i] = scanner.nextInt();
         }
         scanner.nextLine();
+
+        long result = numbers[0];
+        int temp = numbers[0];
+
+        for (int i = 0; i < m - 1; i++) {
+            if (numbers[i + 1] > numbers[i]) {
+                result += numbers[i + 1] - temp;
+            }
+            else if (numbers[i + 1] < numbers[i]) {
+                result += numbers[i + 1] + (n - numbers[i]);
+            }
+
+            temp = numbers[i + 1];
+        }
     }
 }
