@@ -46,5 +46,8 @@ public class CF339B
 
             temp = numbers[i + 1];
         }
+
+
+        System.out.println(result - 1);
     }
 }
