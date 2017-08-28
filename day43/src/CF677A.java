@@ -43,5 +43,7 @@ public class CF677A
                 width += 1;
             }
         }
+
+        System.out.println(width);
     }
 }
