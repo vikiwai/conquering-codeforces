@@ -32,5 +32,16 @@ public class CF677A
             friends[i] = scanner.nextInt();
         }
         scanner.nextLine();
+
+        int width = 0;
+
+        for (int i = 0; i < friends.length; i++) {
+            if (friends[i] >= h) {
+                width += 2;
+            }
+            else {
+                width += 1;
+            }
+        }
     }
 }
