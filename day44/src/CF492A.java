@@ -19,5 +19,20 @@ public class CF492A
         Scanner scanner = new Scanner(System.in);
 
         int n = Integer.parseInt(scanner.nextLine());
+
+        int height = 0;
+        int remainder = n;
+
+        for (int i = 1; i <= n; i++) {
+            remainder -= i;
+
+            if (remainder < 0) {
+                break;
+            }
+
+            height += 1;
+        }
+
+        System.out.println(height);
     }
 }
