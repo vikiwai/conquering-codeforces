@@ -20,5 +20,17 @@ public class CF677A
 {
     public static void main(String[] args)
     {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        int h = scanner.nextInt();
+        scanner.nextLine();
+
+        int[] friends = new int[n];
+
+        for (int i = 0; i < friends.length; i++) {
+            friends[i] = scanner.nextInt();
+        }
+        scanner.nextLine();
     }
 }
