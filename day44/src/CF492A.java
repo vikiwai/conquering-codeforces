@@ -24,7 +24,7 @@ public class CF492A
         int remainder = n;
 
         for (int i = 1; i <= n; i++) {
-            remainder -= i;
+            remainder -= (i * i / 2);
 
             if (remainder < 0) {
                 break;
