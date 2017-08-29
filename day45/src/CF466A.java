@@ -25,5 +25,8 @@ public class CF466A
         int a = scanner.nextInt();
         int b = scanner.nextInt();
         scanner.nextLine();
+
+        int sum_1 = n * a;
+        int sum_2 = (int) Math.ceil((double) n / m) * b;
     }
 }
