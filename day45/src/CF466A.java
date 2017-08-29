@@ -28,5 +28,12 @@ public class CF466A
 
         int sum_1 = n * a;
         int sum_2 = (int) Math.ceil((double) n / m) * b;
+
+        if (sum_1 < sum_2) {
+            System.out.println(sum_1);
+        }
+        else {
+            System.out.println(sum_2);
+        }
     }
 }
