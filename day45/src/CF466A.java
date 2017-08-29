@@ -27,7 +27,16 @@ public class CF466A
         scanner.nextLine();
 
         int sum_1 = n * a;
-        int sum_2 = (int) Math.ceil((double) n / m) * b;
+        int sum_2 = n / m * b;
+
+        if (n % m != 0) {
+            if (b < (n % m) * a) {
+                sum_2 += b;
+            }
+            else {
+                sum_2 += ((n % m) * a);
+            }
+        }
 
         if (sum_1 < sum_2) {
             System.out.println(sum_1);
