@@ -12,9 +12,18 @@
  *  Выходные данные: Выведите целое число — минимальную сумму в рублях, которую Ане придется потратить.
  */
 
+import java.util.Scanner;
+
 public class CF466A
 {
     public static void main(String[] args)
     {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        int m = scanner.nextInt();
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        scanner.nextLine();
     }
 }
