@@ -28,6 +28,7 @@ int main()
             flag = false;
         } else {
             output += " that I hate";
+            flag = true;
         }
     }
 
