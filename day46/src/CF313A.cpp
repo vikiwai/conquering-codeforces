@@ -27,7 +27,7 @@ int main()
     if (n >=0) {
         std::cout << n << std::endl;
     } else {
-        if (abs(n) % 10 >= abs(n) % 100) {
+        if (abs(n) % 10 >= abs(n) % 100 / 10) {
             std::cout << n / 10 << std::endl;
         } else {
             std::cout << (-1) * ((abs(n) - abs(n) % 100) / 10 + abs(n) % 10) << std::endl;
