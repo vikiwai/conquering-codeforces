@@ -25,7 +25,7 @@ int main()
 
     int *m = new int[n];
 
-    for (int i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++) {
         std::cin >> m[i];
     }
 
@@ -37,6 +37,10 @@ int main()
                 m[j + 1] = temp;
             }
         }
+    }
+
+    for(int i = 0; i < n; i++) {
+        std::cout << m[i] << " ";
     }
 
     delete[] m;
