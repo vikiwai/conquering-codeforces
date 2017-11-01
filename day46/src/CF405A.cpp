@@ -20,6 +20,16 @@
 
 int main()
 {
-    std::cout << "dfdf" << std::endl;
+    int n;
+    std::cin >> n;
+
+    int *m = new int[n];
+
+    for (int i = 0; i < n; i++) {
+        std::cin >> m[i];
+    }
+
+    delete[] m;
+
     return 0;
 }
