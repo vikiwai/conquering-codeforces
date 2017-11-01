@@ -29,6 +29,16 @@ int main()
         std::cin >> m[i];
     }
 
+    for(int i = n; i > 0; i--) {
+        for(int j = 0; j < i - 1; j++) {
+            if(m[j] >= m[j + 1]) {
+                int temp = m[j];
+                m[j] = m[j + 1];
+                m[j + 1] = temp;
+            }
+        }
+    }
+
     delete[] m;
 
     return 0;
