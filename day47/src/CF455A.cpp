@@ -14,26 +14,25 @@
 
 #include <iostream>
 
-int cnt[100009];
+long long n, arr[100010], dp[100010], maxi;
 
 int main()
 {
-    int n;
     std::cin >> n;
 
-    int* array = new int[n];
-    for(int i = 0; i < n; i++) {
-        std::cin >> array[i];
-        cnt[array[i]]++;
+    for(long long i = 0, a; i < n; ++i) {
+        std::cin >> a;
+        ++arr[a];
+        maxi = std::max(maxi, a);
     }
 
-    for(int i = 2; i <= 100000; i++) {
-        cnt[i] = std::max(cnt[i - 1], cnt[i - 2] + cnt[i] * i);
+    dp[1] = arr[1];
+
+    for(long long i = 1; i <= maxi; ++i) {
+        dp[i] = std::max(dp[i - 1], dp[i - 2] + i * arr[i]);
     }
 
-    std::cout << cnt[100000] << std::endl;
-
-    delete[] array;
+    std::cout << dp[maxi];
 
     return 0;
 }
