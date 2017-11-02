@@ -14,18 +14,7 @@
 
 #include <iostream>
 
-int cnt[100001];
-
-int f(int i)
-{
-    if(i == 0) {
-        return 0;
-    } else if(i == 1) {
-        return cnt[1];
-    } else {
-        return (std::max(f(i - 1), f(i - 2) + cnt[i] * i));
-    }
-}
+int cnt[100009];
 
 int main()
 {
@@ -33,15 +22,16 @@ int main()
     std::cin >> n;
 
     int* array = new int[n];
-    for(int i = 0; i < n; ++i) {
+    for(int i = 0; i < n; i++) {
         std::cin >> array[i];
+        cnt[array[i]]++;
     }
 
-    for(int i = 0; i < n; ++i) {
-        cnt[array[i]] += 1;
+    for(int i = 2; i <= 100000; i++) {
+        cnt[i] = std::max(cnt[i - 1], cnt[i - 2] + cnt[i] * i);
     }
 
-    std::cout << f(n) << std::endl;
+    std::cout << cnt[100000] << std::endl;
 
     delete[] array;
 
