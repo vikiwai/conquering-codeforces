@@ -29,7 +29,6 @@ int main()
     bool flag = true;
 
     while (flag) {
-
         for (int j = 0; j < n; ++j) {
             if (array[j] > max) {
                 max = array[j];
@@ -42,7 +41,7 @@ int main()
             }
         }
 
-        output++;
+        output += max;
 
         for(int i = n; i > 0; i--) {
             for(int j = 0; j < i - 1; j++) {
@@ -58,6 +57,7 @@ int main()
             flag = false;
         }
     }
-    
+
+    std::cout << output << std::endl;
     return 0;
 }
