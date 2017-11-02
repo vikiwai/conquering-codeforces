@@ -24,40 +24,5 @@ int main()
         std::cin >> array[i];
     }
 
-    int output = 0;
-    int max = -1;
-    bool flag = true;
-
-    while (flag) {
-        for (int j = 0; j < n; ++j) {
-            if (array[j] > max) {
-                max = array[j];
-            }
-        }
-
-        for (int j = 0; j < n; ++j) {
-            if (array[j] == max || array[j] == (max + 1) || array[j] == (max - 1)) {
-                array[j] = -1;
-            }
-        }
-
-        output += max;
-
-        for(int i = n; i > 0; i--) {
-            for(int j = 0; j < i - 1; j++) {
-                if(array[j] >= array[j + 1]) {
-                    int temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
-                }
-            }
-        }
-
-        if(array[n - 1] == -1) {
-            flag = false;
-        }
-    }
-
-    std::cout << output << std::endl;
     return 0;
 }
