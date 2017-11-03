@@ -2,13 +2,12 @@ import java.util.Scanner;
 
 public class CF887A
 {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         String line = scanner.nextLine();
 
-        if(line.indexOf('1') == -1) {
+        if(line.indexOf("1") == -1) {
             System.out.println("no");
             return;
         }
@@ -23,7 +22,6 @@ public class CF887A
 
         if (k >= 6) {
             System.out.println("yes");
-
             return;
         }
 
