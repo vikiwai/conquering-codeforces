@@ -21,5 +21,15 @@
 
 int main()
 {
+    int s, n;
+    std::cin >> s >> n;
+
+    int* scramble = new int[2 * n];
+
+    for (int i = 0; i < 2 * n ; ++i) {
+        std::cin >> scramble[i] >> scramble[i + 1];
+        std::cout << std::endl;
+    }
+    
     return 0;
 }
