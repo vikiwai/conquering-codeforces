@@ -31,5 +31,10 @@
 
 int main()
 {
+    int a, b, n;
+    std:: cin >> a >> b >> n;
+
+    bool who = true;
+
     return 0;
 }
