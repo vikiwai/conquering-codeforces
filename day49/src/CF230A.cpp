@@ -30,6 +30,19 @@ int main()
         std::cin >> scramble[i] >> scramble[i + 1];
     }
 
+    for(int i = 2 * n; i > 0; i -= 2) {
+        for(int j = 0; j < i - 2; j += 2) {
+            if(scramble[j] >= scramble[j + 2]) {
+                int temp = scramble[j];
+                scramble[j] = scramble[j + 2];
+                scramble[j + 2] = temp;
+                temp = scramble[j + 1];
+                scramble[j + 1] = scramble[j + 3];
+                scramble[j + 3] = temp;
+            }
+        }
+    }
+
     for (int j = 0; j < 2 * n - 1 ; j += 2) {
         if (s > scramble[j]) {
             s += scramble[j + 1];
