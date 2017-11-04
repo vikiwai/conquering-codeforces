@@ -15,6 +15,20 @@
 
 #include <iostream>
 
+ int gcd(int a, int b)
+ {
+    while (a != b) {
+        if (a > b) {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+        b = b - a;
+    }
+
+    return a;
+}
+
 int main()
 {
     return 0;
