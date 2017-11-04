@@ -37,5 +37,24 @@ int main()
     int a;
     int k = 0;
 
+    t--;
+
+    for(int i = 0; i < n; i++)
+    {
+        std::cin >> a;
+        way.push_back(a);
+    }
+
+    while(t > k)
+    {
+        k += way[k];
+    }
+
+    if(t == k) {
+        std::cout << "YES" << std::endl;
+    } else {
+        std::cout << "NO" << std::endl;
+    }
+
     return 0;
 }
