@@ -36,5 +36,21 @@ int main()
 
     bool who = true;
 
+    while (n > 0) {
+        if (who) {
+            n -= gcd(a, n);
+            who = false;
+        } else {
+            n -= gcd(b, n);
+            who = true;
+        }
+    }
+
+    if (who) {
+        std::cout << "1";
+    } else {
+        std::cout << "0";
+    }
+
     return 0;
 }
