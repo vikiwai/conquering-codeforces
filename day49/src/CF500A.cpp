@@ -26,6 +26,16 @@
 
 int main()
 {
-    
+    std::vector<int> way;
+
+    int n;
+    std::cin >> n;
+
+    int t;
+    std::cin >> t;
+
+    int a;
+    int k = 0;
+
     return 0;
 }
