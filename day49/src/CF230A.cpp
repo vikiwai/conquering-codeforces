@@ -26,10 +26,11 @@ int main()
 
     int* scramble = new int[2 * n];
 
-    for (int i = 0; i < 2 * n ; ++i) {
+    for (int i = 0; i < 2 * n - 1; ++i) {
         std::cin >> scramble[i] >> scramble[i + 1];
         std::cout << std::endl;
     }
-    
+
+
     return 0;
 }
