@@ -26,11 +26,23 @@ int main()
 
     int* scramble = new int[2 * n];
 
-    for (int i = 0; i < 2 * n - 1; ++i) {
+    for (int i = 0; i < 2 * n - 1; i += 2) {
         std::cin >> scramble[i] >> scramble[i + 1];
-        std::cout << std::endl;
     }
 
+    for (int j = 0; j < 2 * n - 1 ; j += 2) {
+        if (s > scramble[j]) {
+            s += scramble[j + 1];
+
+            if (j == 2 * n - 2) {
+                std::cout << "YES" << std::endl;
+            }
+        }
+        else {
+            std::cout << "NO" << std::endl;
+            break;
+        }
+    }
 
     return 0;
 }
