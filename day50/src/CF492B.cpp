@@ -18,6 +18,14 @@
 
 int main()
 {
-    std::cout << "Hello, World!" << std::endl;
+    int n;
+    double l;
+    std::cin >> n >> l;
+
+    int* arr = new int[n];
+    for(int i = 0; i < n; i++) {
+        std::cin >> arr[i];
+    }
+
     return 0;
 }
