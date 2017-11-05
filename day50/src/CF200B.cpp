@@ -28,6 +28,16 @@ int main()
     for (int i = 0; i < n; ++i) {
         std::cin >> p[i];
     }
-    
+
+    for(int i = n; i > 0; i--) {
+        for(int j = 0; j < i - 1; j++) {
+            if(p[j] >= p[j + 1]) {
+                int temp = p[j];
+                p[j] = p[j + 1];
+                p[j + 1] = temp;
+            }
+        }
+    }
+
     return 0;
 }
