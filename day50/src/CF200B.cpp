@@ -24,13 +24,13 @@ int main()
     int n;
     std::cin >> n;
 
-    int sum1 = 0;
-    int sum2 = 0;
+    double sum1 = 0;
+    double sum2 = 0;
 
     int* p = new int[n];
     for (int i = 0; i < n; ++i) {
         std::cin >> p[i];
-        sum2 += p[i];
+        sum2 += 1;
     }
 
     for(int i = n; i > 0; i--) {
@@ -43,9 +43,18 @@ int main()
         }
     }
 
-    for (int i = 0; i < n; ++i) {
-        sum1 += p[i] * 1.0 / p[n - 1];
+    if(p[0] == 0 && n == 1) {
+        std::cout << "0.0000000000000";
     }
-    
+    else {
+        sum2 = sum2 / (p[n - 1] * 1.0);
+
+        for (int i = 0; i < n; ++i) {
+            sum1 += (p[i] * 1.0) / p[n - 1];
+        }
+
+        std::cout << std::fixed << std::setprecision(15) << sum1 / sum2 << std::endl;
+    }
+
     return 0;
 }
