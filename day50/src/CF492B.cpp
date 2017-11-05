@@ -18,8 +18,7 @@
 
 int main()
 {
-    int n;
-    double l;
+    int n, l;
     std::cin >> n >> l;
 
     int* arr = new int[n];
@@ -39,10 +38,16 @@ int main()
 
     int max = 0;
 
+    if (l - arr[0] >= l - arr[n - 1]) {
+        max = l - arr[0];
+    } else {
+        max = l - arr[n - 1];
+    }
+
     for (int i = 0; i < n - 1; ++i)
     {
-        if(arr[i + 1] - arr[i] > max) {
-            max = arr[i + 1] - arr[i];
+        if((arr[i + 1] - arr[i]) / 2 > max) {
+            max = (arr[i + 1] - arr[i]) / 2;
         }
     }
 
