@@ -38,6 +38,8 @@ int main()
 
     int max = 0;
 
+    double output = 0.0;
+
     if (l - arr[0] >= l - arr[n - 1]) {
         max = l - arr[0];
     } else {
