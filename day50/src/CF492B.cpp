@@ -15,6 +15,7 @@
  */
 
 #include <iostream>
+#include <iomanip>
 
 int main()
 {
@@ -36,24 +37,22 @@ int main()
         }
     }
 
-    int max = 0;
+    double max = 0;
 
-    double output = 0.0;
-
-    if (l - arr[0] >= l - arr[n - 1]) {
-        max = l - arr[0];
+    if ((arr[0] - 0)  >= (l - arr[n - 1])) {
+        max = arr[0] - 0;
     } else {
         max = l - arr[n - 1];
     }
 
     for (int i = 0; i < n - 1; ++i)
     {
-        if((arr[i + 1] - arr[i]) / 2 > max) {
-            max = (arr[i + 1] - arr[i]) / 2;
+        if((arr[i + 1] - arr[i]) / 2.0 > max) {
+            max = (arr[i + 1] - arr[i]) / 2.0;
         }
     }
 
-    std::cout << l / max << std::endl;
+    std::cout << std::fixed << std::setprecision(10) << max << std::endl;
 
     return 0;
 }
