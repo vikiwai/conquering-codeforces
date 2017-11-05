@@ -24,9 +24,13 @@ int main()
     int n;
     std::cin >> n;
 
+    int sum1 = 0;
+    int sum2 = 0;
+
     int* p = new int[n];
     for (int i = 0; i < n; ++i) {
         std::cin >> p[i];
+        sum2 += p[i];
     }
 
     for(int i = n; i > 0; i--) {
@@ -39,5 +43,9 @@ int main()
         }
     }
 
+    for (int i = 0; i < n; ++i) {
+        sum1 += p[i] * 1.0 / p[n - 1];
+    }
+    
     return 0;
 }
