@@ -27,7 +27,7 @@ int main()
 
     int* array = new int[n];
     for(int i = 0; i < n; i++) {
-        std::cin >> array[n];
+        std::cin >> array[i];
     }
 
     int min = array[0];
@@ -35,17 +35,17 @@ int main()
 
     int k = 0;
 
-    for(int j = 1; j < n; ++j) {
+    for(int j = 1; j < n; j++) {
         if(array[j] < min) {
             min = array[j];
-            k++;
+            k += 1;
         } else if (array[j] > max) {
             max = array[j];
-            k++;
+            k += 1;
         }
     }
 
     std::cout << k << std::endl;
-    
+
     return 0;
 }
