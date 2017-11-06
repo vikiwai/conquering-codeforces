@@ -20,7 +20,7 @@ int main()
     int sum = 0;
 
     std::cin >> n >> a >> b >> c;
-
+    
     for(int i = 0; i * a <= n; i++) {
         for(int j = 0; j * b + i * a <= n; j++) {
             if((n - i * a - j * b) % c == 0) {
