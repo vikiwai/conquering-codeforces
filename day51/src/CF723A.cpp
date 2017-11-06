@@ -15,8 +15,12 @@
 
 int main()
 {
-    int x1, x2, x3;
-    std::cin >> x1 >> x2 >> x3;
-    
+    int* x = new int[3];
+    std::cin >> x[0] >> x[1] >> x[2];
+
+    std::sort(x, x + 3);
+
+    std::cout << x[2] - x[0];
+
     return 0;
 }
