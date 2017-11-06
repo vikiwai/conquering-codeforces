@@ -30,5 +30,20 @@ int main()
         std::cin >> array[n];
     }
 
+    int min = array[0];
+    int max = array[0];
+
+    int k = 0;
+
+    for(int j = 1; j < n; ++j) {
+        if(array[j] < min) {
+            min = array[j];
+            k++;
+        } else if (array[j] > max) {
+            max = array[j];
+            k++;
+        }
+    }
+
     return 0;
 }
