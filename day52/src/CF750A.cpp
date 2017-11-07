@@ -23,19 +23,15 @@ int main()
     int n, k;
     std::cin >> n >> k;
 
-    int now = 240;
-    int i = 0;
+    int now = 240 - k;
+    int i;
 
-    for(i; i < n;) {
-        if(now - k - 5 * i < 0) {
-            break;
-        } else {
-            i++;
-            now -= i * 5;
-        }
+    for(i = 1; now >= 5 * i && i <= n; i++)
+    {
+        now -= 5 * i;
     }
 
-    std::cout << i << std::endl;
+    std::cout << i - 1 << std::endl;
 
     return 0;
 }
