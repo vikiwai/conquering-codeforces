@@ -24,17 +24,15 @@ int main()
     std::cin >> n >> k;
 
     int now = 240;
-    int i = 1;
+    int i = 0;
 
-    for(i; i <= n; i++) {
+    for(i; i < n;) {
         if(now - k - 5 * i < 0) {
-            i--;
             break;
         } else {
+            i++;
             now -= i * 5;
         }
-
-        std::cout << i << " " << now << std::endl;
     }
 
     std::cout << i << std::endl;
