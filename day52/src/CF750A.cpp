@@ -20,6 +20,24 @@
 
 int main()
 {
-    std::cout << "Hello, World!" << std::endl;
+    int n, k;
+    std::cin >> n >> k;
+
+    int now = 240;
+    int i = 1;
+
+    for(i; i <= n; i++) {
+        if(now - k - 5 * i < 0) {
+            i--;
+            break;
+        } else {
+            now -= i * 5;
+        }
+
+        std::cout << i << " " << now << std::endl;
+    }
+
+    std::cout << i << std::endl;
+
     return 0;
 }
