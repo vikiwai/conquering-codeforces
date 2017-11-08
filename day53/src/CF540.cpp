@@ -22,6 +22,15 @@ int main()
     int* pos = new int[n];
     int* word = new int[n];
 
-    
+    std::cin >> n;
+
+    for (int i = 0; i < n; ++i) {
+        std::cin >> pos[i];
+    }
+
+    for (int i = 0; i < n; ++i) {
+        std::cin >> word[i];
+    }
+
     return 0;
 }
