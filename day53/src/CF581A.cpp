@@ -22,6 +22,10 @@ int main()
 {
     int a, b;
     std::cin >> a >> b;
+
+    int max = 0;
+
+    (a > b) ? (max = a) : (max = b);
     
     return 0;
 }
