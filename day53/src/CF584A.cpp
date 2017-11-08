@@ -11,11 +11,21 @@
  */
 
 #include <iostream>
+#include <math.h>
 
 int main()
 {
     int n, t;
     std::cin >> n >> t;
+
+    for(double i = pow(10, n - 1); i < pow(10, n) ; ++i) {
+        if ((long long) i % t == 0) {
+            std::cout <<(long long) i << std::endl;
+            return 0;
+        }
+    }
+
+    std::cout << "-1" << std::endl;
 
     return 0;
 }
