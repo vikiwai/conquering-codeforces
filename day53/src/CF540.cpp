@@ -18,5 +18,10 @@
 
 int main()
 {
+    int n;
+    int* pos = new int[n];
+    int* word = new int[n];
+
+    
     return 0;
 }
