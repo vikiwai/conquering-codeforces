@@ -14,5 +14,8 @@
 
 int main()
 {
+    int n, t;
+    std::cin >> n >> t;
+
     return 0;
 }
