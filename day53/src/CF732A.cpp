@@ -16,8 +16,26 @@
  *                   без сдачи.
  */
 
+#include <iostream>
+
 int main()
 {
+    int k, r;
+    std::cin >> k >> r;
+
+    int temp;
+    int i = 0;
+
+    while(true) {
+        i++;
+        temp = k;
+        temp *= i;
+        if (temp % 10 == r) break;
+        if (temp % 10 == 0) break;
+    }
+
+    std::cout << i << std::endl;
+
     return 0;
 }
 
