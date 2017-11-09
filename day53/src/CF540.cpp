@@ -43,10 +43,10 @@ int main()
     }
 
     for (int j = 0; j < n; ++j) {
-        if (pos[j] - word[j] > 4) {
-            sum += 10 - pos[j] + word[j];
+        if (abs(pos[j] - word[j]) > 5) {
+            sum += 10 - abs(pos[j] - word[j]);
         } else {
-            sum += pos[j] - word[j];
+            sum += abs(pos[j] - word[j]);
         }
     }
 
