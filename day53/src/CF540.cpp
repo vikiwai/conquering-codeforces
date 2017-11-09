@@ -20,27 +20,30 @@
 int main()
 {
     int n, int_pos, int_word;
+    std::cin >> n;
+
     int* pos = new int[n];
     int* word = new int[n];
+
+    std::cin >> int_pos >> int_word;
+
+    for (int i = n - 1; i >= 0; --i) {
+        if (i == n - 1) {
+            pos[n - i - 1] = int_pos / (int) pow(10, i);
+        } else {
+            pos[n - i - 1] = (int_pos / (int) pow(10, i)) % 10;
+        }
+    }
+
+    for (int i = n - 1; i >= 0; --i) {
+        if (i == n - 1) {
+            word[n - i - 1] = int_word / (int) pow(10, i);
+        } else {
+            word[n - i - 1] = (int_word / (int) pow(10, i)) % 10;
+        }
+    }
+
     int sum = 0;
-
-    std::cin >> n >> int_pos >> int_word;
-
-    for (int i = n; i > 0; --i) {
-        if (i == n) {
-            pos[n - i] = int_pos / (int) pow(10, i - 1);
-        } else {
-            pos[n - i] = (int_pos / (int) pow(10, i - 1)) % 10;
-        }
-    }
-
-    for (int i = n; i > 0; --i) {
-        if (i == n) {
-            word[n - i] = int_word / (int) pow(10, i - 1);
-        } else {
-            word[n - i] = (int_word / (int) pow(10, i - 1)) % 10;
-        }
-    }
 
     for (int j = 0; j < n; ++j) {
         if (abs(pos[j] - word[j]) > 5) {
@@ -48,9 +51,10 @@ int main()
         } else {
             sum += abs(pos[j] - word[j]);
         }
+        std::cout << sum << std::endl;
     }
 
-    std::cout << sum << std::endl;
+    std::cout << std::endl << sum << std::endl;
 
     delete[] pos;
     delete[] word;
