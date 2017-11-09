@@ -15,21 +15,22 @@
  */
 
 #include <iostream>
+#include <math.h>
 
 int main()
 {
-    int n;
+    int n, int_pos, int_word;
     int* pos = new int[n];
     int* word = new int[n];
 
-    std::cin >> n;
+    std::cin >> n >> int_pos >> int_word;
 
-    for (int i = 0; i < n; ++i) {
-        std::cin >> pos[i];
+    for (int i = n; i > 0; ++i) {
+        pos[i] = int_pos % (int) pow(10, i);
     }
 
-    for (int i = 0; i < n; ++i) {
-        std::cin >> word[i];
+    for (int i = n; i > 0; ++i) {
+        word[i] = int_word % (int) pow(10, i);
     }
 
     int sum = 0;
@@ -41,6 +42,11 @@ int main()
             sum += pos[j] - word[j];
         }
     }
-    
+
+    std::cout << sum << std::endl;
+
+    delete[] pos;
+    delete[] word;
+
     return 0;
 }
