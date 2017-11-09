@@ -18,5 +18,18 @@
 
 int main()
 {
+    int cnt = 0;
+    int n, k, number;
+    std::cin >> n >> k;
+
+    for(int i = 0; i < n; i++){
+        std::cin >> number;
+        if (5 - number >= k) {
+            cnt++;
+        }
+    }
+
+    std::cout << cnt / 3;
+
     return 0;
 }
