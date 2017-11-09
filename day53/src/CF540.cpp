@@ -22,18 +22,25 @@ int main()
     int n, int_pos, int_word;
     int* pos = new int[n];
     int* word = new int[n];
+    int sum = 0;
 
     std::cin >> n >> int_pos >> int_word;
 
-    for (int i = n; i > 0; ++i) {
-        pos[i] = int_pos % (int) pow(10, i);
+    for (int i = n; i > 0; --i) {
+        if (i == n) {
+            pos[n - i] = int_pos / (int) pow(10, i - 1);
+        } else {
+            pos[n - i] = (int_pos / (int) pow(10, i - 1)) % 10;
+        }
     }
 
-    for (int i = n; i > 0; ++i) {
-        word[i] = int_word % (int) pow(10, i);
+    for (int i = n; i > 0; --i) {
+        if (i == n) {
+            word[n - i] = int_word / (int) pow(10, i - 1);
+        } else {
+            word[n - i] = (int_word / (int) pow(10, i - 1)) % 10;
+        }
     }
-
-    int sum = 0;
 
     for (int j = 0; j < n; ++j) {
         if (pos[j] - word[j] > 4) {
