@@ -32,5 +32,15 @@ int main()
         std::cin >> word[i];
     }
 
+    int sum = 0;
+
+    for (int j = 0; j < n; ++j) {
+        if (pos[j] - word[j] > 4) {
+            sum += 10 - pos[j] + word[j];
+        } else {
+            sum += pos[j] - word[j];
+        }
+    }
+    
     return 0;
 }
