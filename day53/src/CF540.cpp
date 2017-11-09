@@ -19,27 +19,28 @@
 
 int main()
 {
-    int n, int_pos, int_word;
+    int n;
+    long int_pos, int_word;
     std::cin >> n;
 
-    int* pos = new int[n];
-    int* word = new int[n];
+    long* pos = new long[n];
+    long* word = new long[n];
 
     std::cin >> int_pos >> int_word;
 
     for (int i = n - 1; i >= 0; --i) {
         if (i == n - 1) {
-            pos[n - i - 1] = int_pos / (int) pow(10, i);
+            pos[n - i - 1] = int_pos / (long) pow(10, i);
         } else {
-            pos[n - i - 1] = (int_pos / (int) pow(10, i)) % 10;
+            pos[n - i - 1] = (int_pos / (long) pow(10, i)) % 10;
         }
     }
 
     for (int i = n - 1; i >= 0; --i) {
         if (i == n - 1) {
-            word[n - i - 1] = int_word / (int) pow(10, i);
+            word[n - i - 1] = int_word / (long) pow(10, i);
         } else {
-            word[n - i - 1] = (int_word / (int) pow(10, i)) % 10;
+            word[n - i - 1] = (int_word / (long) pow(10, i)) % 10;
         }
     }
 
