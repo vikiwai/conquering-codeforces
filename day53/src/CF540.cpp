@@ -15,49 +15,23 @@
  */
 
 #include <iostream>
-#include <math.h>
+#include <cmath>
 
 int main()
 {
     int n;
-    long int_pos, int_word;
     std::cin >> n;
 
-    long* pos = new long[n];
-    long* word = new long[n];
-
-    std::cin >> int_pos >> int_word;
-
-    for (int i = n - 1; i >= 0; --i) {
-        if (i == n - 1) {
-            pos[n - i - 1] = int_pos / (long) pow(10, i);
-        } else {
-            pos[n - i - 1] = (int_pos / (long) pow(10, i)) % 10;
-        }
-    }
-
-    for (int i = n - 1; i >= 0; --i) {
-        if (i == n - 1) {
-            word[n - i - 1] = int_word / (long) pow(10, i);
-        } else {
-            word[n - i - 1] = (int_word / (long) pow(10, i)) % 10;
-        }
-    }
+    std::string key1, key2;
+    std::cin >> key1 >> key2;
 
     int sum = 0;
 
-    for (int j = 0; j < n; ++j) {
-        if (abs(pos[j] - word[j]) > 5) {
-            sum += 10 - abs(pos[j] - word[j]);
-        } else {
-            sum += abs(pos[j] - word[j]);
-        }
+    for (int i = 0; i < n; ++i) {
+        sum += std::min(abs(key1[i] - key2[i]), 10 - abs(key1[i] - key2[i]));
     }
 
     std::cout << sum << std::endl;
-
-    delete[] pos;
-    delete[] word;
 
     return 0;
 }
