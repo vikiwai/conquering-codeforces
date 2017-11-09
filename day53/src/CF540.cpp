@@ -53,7 +53,7 @@ int main()
         }
     }
 
-    std::cout << std::endl << sum << std::endl;
+    std::cout << sum << std::endl;
 
     delete[] pos;
     delete[] word;
