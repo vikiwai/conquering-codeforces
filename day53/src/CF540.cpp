@@ -51,7 +51,6 @@ int main()
         } else {
             sum += abs(pos[j] - word[j]);
         }
-        std::cout << sum << std::endl;
     }
 
     std::cout << std::endl << sum << std::endl;
