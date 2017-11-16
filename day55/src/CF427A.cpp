@@ -38,6 +38,8 @@ int main()
             police += action;
         }
     }
+
+    std::cout << unsolved_crime;
     
     return 0;
 }
