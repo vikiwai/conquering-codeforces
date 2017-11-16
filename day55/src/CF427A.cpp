@@ -22,12 +22,22 @@ int main()
     int n;
     std::cin >> n;
 
-    int police = 0;
     int action = 0;
+    int police = 0;
     int unsolved_crime = 0;
 
     for(int i = 0; i < n; ++i) {
-
+        std::cin >> action;
+        if(action == -1) {
+            if(police > 0) {
+                police--;
+            } else {
+                unsolved_crime++;
+            }
+        } else {
+            police += action;
+        }
     }
+    
     return 0;
 }
