@@ -19,5 +19,15 @@
 
 int main()
 {
+    int n;
+    std::cin >> n;
+
+    int police = 0;
+    int action = 0;
+    int unsolved_crime = 0;
+
+    for(int i = 0; i < n; ++i) {
+
+    }
     return 0;
 }
